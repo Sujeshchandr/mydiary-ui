@@ -1,0 +1,127 @@
+﻿body {
+}
+.incomeDetails_Outerdiv
+{
+    float: left;
+    left: 20px;
+    position: relative;
+    top: 20px;
+    
+}
+.incomeDetails_innerdiv
+{
+    background-color: #EDEDED;
+    padding: 10px;
+    width: 730px;
+    border-color: #7E2525;
+    border: 1px solid;
+    box-shadow: 0 0 4px #000000;
+    border-radius: 10px;
+    margin: 10px;
+    height:530px;
+
+}
+
+
+
+.addincomes_toolbox
+{
+    color: #0000FF;
+    /*cursor: pointer;*/
+    height: 50px;
+    width: 200px;
+    padding: 15px;
+    
+}
+
+.incomeDetails_filterdiv
+{
+    background-color: #1D9D72;
+    border-radius: 35px;
+    box-shadow: 0 0 10px #1D9D72;
+    margin-left: 8px;
+    margin-right: 10px;
+    padding-left: 38px;
+    padding-bottom: 9px;
+    height:13%;
+   /*width:98%;/*Not tested*/
+}
+.incomeDetails_filterdiv_date
+{
+    float:left;
+    padding:2px;
+    width:35%;
+}
+.incomeDetails_filterdiv_date p.input-group input
+{
+    width:inherit;
+}
+.incomeDetails_filterdiv_type
+{
+    padding:2px;
+    /*float:right;*/
+    width:55%;
+}
+.incomeDetails_Summary
+{
+    box-shadow: 0 0 10px #1D9D72;
+    border-radius: 10px;
+    margin: 10px;
+    height: 75%;
+    background:none repeat scroll 0 0 #FFFFFF;
+    overflow:hidden;
+     /* width:98%;Not tested*/
+}
+.incomeDetails_Summary_Title
+{
+    background-color: #1D9D72;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 4px #000000;
+    color: #0000FF;
+    font-family: 'Comic Sans MS';
+    font-size: medium;
+    font-style: oblique;
+    font-weight: bolder;
+    height: 8%;
+    text-align: center;
+}
+.incomeDetails_Pagination
+{
+    height: 10%;
+}
+.incomeDetails_Pagination .pagination
+{
+    margin :0px 0px 4px 10px;
+}
+
+.incomeDetails_Pagination .pagination > .active > a, 
+.incomeDetails_Pagination .pagination > .active > span, 
+.incomeDetails_Pagination .pagination > .active > a:hover, 
+.incomeDetails_Pagination .pagination > .active > span:hover, 
+.incomeDetails_Pagination .pagination > .active > a:focus, 
+.incomeDetails_Pagination .pagination > .active > span:focus
+{
+     background-color: #1D9D72;
+
+}
+
+/* POP OVER CSS */
+
+.popover {
+    width :300px!important
+}
+.popover .popover-title {
+    padding-left:30px;
+    background-color:#1D9D72;
+    font-weight:bold;
+}
+.popover button.closeErrorLog {
+    margin: 8px;
+    font-size: 19px;
+}
+
+.incomeComments {
+    color:green;
+    padding-left:5px;
+    cursor:pointer;
+}

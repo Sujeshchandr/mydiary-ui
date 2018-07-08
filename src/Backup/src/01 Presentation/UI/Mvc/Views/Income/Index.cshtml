@@ -1,0 +1,175 @@
+﻿@model MyDiary.UI.ViewModels.IncomeViewModel
+
+@{
+    ViewBag.Title = "Incomes";
+}
+
+<div   ng-app ="incomeModule">
+    <div >
+
+         <div id="incomeDetailsFullDiv" ng-controller="incomeController"  >
+           
+      <script type="text/ng-template" id="myModalContent.html">
+
+        <div class="modal-header" data-id= "{{ modalData.id }}">
+            <h3 class="modal-title">{{ modalData.title }} </h3>
+        </div>
+        <div class="modal-body">
+           
+          <span  >{{ modalData.description }} </span>
+          
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">{{ modalData.ok }} </button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">{{ modalData.cancel }} </button>
+        </div>
+
+    </script>
+
+        <div class="incomeDetails_Outerdiv" >
+               
+            <div class="incomeDetails_innerdiv" >
+              
+                  <div class="incomeDetails_filterdiv">
+                       
+                   
+                    <div class="incomeDetails_filterdiv_date" >
+                       <span>Select Date </span>  
+                        
+                        <div class="row">
+                         <div class="col-md-4">
+                            <p class="input-group"> 
+                             
+                                <input type="text"  class="form-control"  datepicker-popup="{{dateFormat}}"  ng-model="Filters.IncomeDate" is-open="opened" 
+                                      
+                                  min-date:'minDate'  max-date:'22-06-2015' @*date-disabled="disabled(date, mode)"*@   ng-required="true" close-text="Close"  placeholder="Select a date"/>
+                                 <span class="input-group-btn">
+                                 <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span> 
+                            </p>
+                        </div>
+                    </div>
+                    
+                    </div>  
+               
+                    <div class="incomeDetails_filterdiv_type">                  
+                       <span> Enter IncomeType </span> <div>                             
+                           <div class="container" >
+                              <div class="row">
+                                 <div class="col-sm-6 inner-addon right-addon">
+        
+                                    <select id="multipleselect-incometypes" class="form-control select2-search input" multiple="multiple" style="width:70%" ng-model="Filters.IncomeTypes" >
+                                        
+                                       <option ng-selected="{{incometype.Type == IncomeViewModel.IncomeType}}" 
+                                               ng-repeat="incometype in incomeTypes"
+                                              value="{{incometype.TypeId}}">
+                                                 {{incometype.Type}}
+                                    </option>
+                                       
+                                 </select> 
+                                      @*<i class="glyphicon glyphicon-search"></i>*@
+                             </div><!--/col-->
+                            </div><!--/row-->
+                           </div>                 
+                
+                            @*<input type="text" ng-model="incomes" placeholder="search by income type" class="FilteredType"/>*@
+
+                                                        </div>             
+                    </div> 
+
+                </div>
+                 
+                  <div class="incomeDetails_Summary">
+                    <div class="incomeDetails_Summary_Title">Income Summary ( Total Incomes: {{ IncomeSummaryViewModel.TotalAmount }} )</div>
+                    <div class="gridStyle" ng-grid="gridOptions"></div>
+                 
+                </div>
+                <div class="incomeDetails_Pagination">
+                    <pagination total-items="PagingViewModel.TotalItems" ng-model="PagingViewModel.CurrentPage" max-size="PagingViewModel.MaximumNoOfPages" class="pagination-sm" boundary-links="true" rotate="false" num-pages="Paging.numPages"> </pagination>
+                    @*<pagination total-items="Paging.totalItems" ng-model="Paging.currentPage" max-size="Paging.maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="Paging.numPages"></pagination>*@
+                @*Page: {{currentPage}} / {{numPages}}*@
+                </div>
+              
+            </div>
+             
+            <div class="diary_activityArea_outerDiv" >
+                <div class="add_income_div">
+
+                <div class="diary_activityArea_outerDiv_close">X</div>  
+                <div id="incomediv_data">
+                   
+                    <div  >
+                       <div>IncomeType</div>
+                       <div id="incomediv_data_incomeType">
+                        <ui-select  ng-model="IncomeViewModel.IncomeType"  ng-init="IncomeViewModel.IncomeType = DropDownInitializer"  theme="select2" @*ng-disabled="disabled"*@ @*style="min-width: 300px;"*@>
+                            <ui-select-match placeholder="Select One" >{{$select.selected.Type}}</ui-select-match>
+                            <ui-select-choices repeat="incometype in incomeTypes | filter: {Type: $select.search}">
+                              <div ng-bind-html="incometype.Type | highlight: $select.search"></div>
+                              @*<small>{{incometype.Type}}
+                                email: {{incometype.Type}}
+                                age: <span ng-bind-html="''+person.age | highlight: $select.search"></span>
+                              </small>*@
+                            </ui-select-choices>
+                       </ui-select>
+                           
+                @*<select  ng-model="IncomeViewModel.IncomeType" ng-init="IncomeViewModel.IncomeType = incomeTypes[0]" ng-options="incometype.Type for incometype in incomeTypes"></select>*@                                             
+                         <a  id="AddIncomeType" ng-click="IncomeTypeActions.Show()">Add</a>  
+                           </div>
+                       </div>
+                   
+                    <div id="incometype_add" ng-show="IncomeTypeActions.IsAddSectionVisible" >
+                        <input type="text"  ng-model="IncomeTypeViewModel.Type"/>
+                         <a ng-click="IncomeTypeActions.Add()" id="incometype_save" >Save</a>
+                        <a id="incometype_cancel" ng-click="IncomeTypeActions.Hide()">Cancel</a> 
+                    </div>
+
+                    <div>
+                        <div>Amount *</div>
+                        <div>
+                            <input type="text" ng-model ="IncomeViewModel.Amount" id ="expensediv_data_amount" class="DRvalidate"/></div>
+                    </div>
+                    <div>
+                        <div>Date *</div>
+                        <div>
+                            <input type="text" ng-model ="IncomeViewModel.IncomeDate"  class="datepicker DRvalidate" id="expensediv_data_date" ></div>
+                    </div>
+                    <div>
+                        <div>Description *</div>
+                        <div>
+                            <input type="text" ng-model ="IncomeViewModel.Description" id="expensediv_data_description" class="DRvalidate"/></div>
+                    </div>
+                    <div>
+                        <div>Comments</div>
+                        <div>
+                            <input type="text"  ng-model ="IncomeViewModel.Comments" id="expensediv_data_comments"/></div>
+                    </div>
+                </div>
+                <input type="button" value="Save" ng-click="IncomeOperation()"  id="btnSaveIncome" />
+            </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+@*<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryui")
+@Scripts.Render("~/bundles/bootstrap") 
+@Scripts.Render("~/bundles/bootstrap.ui") 
+@Scripts.Render("~/bundles/angularjs")  
+@Scripts.Render("~/bundles/chart") 
+@Scripts.Render("~/bundles/angular.ui")
+@Scripts.Render("~/bundles/Diary/angularjs")
+@Scripts.Render("~/bundles/select2")
+@Styles.Render("~/Content/nggrid")
+@Styles.Render("~/Content/select2")
+
+@Scripts.Render("~/bundles/Diary")
+
+@Styles.Render("~/Content/Diary.Income")
+@Scripts.Render("~/bundles/Diary.Incomes")

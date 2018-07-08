@@ -1,0 +1,123 @@
+﻿@model MyDiary.UI.ViewModels.UserViewModel
+
+@{
+    ViewBag.Title = "Register | Login";
+}
+
+
+
+@*<div class="siteimages">*@
+
+@*<div class="useractions">*@
+<div>
+    @*<div class="login">
+
+            <div class="loginTitle">Login
+
+            </div>
+            <div class="loginData" >
+
+                <div class="editor-label"> Email Id</div>
+                <div class="editor-field"  ><input class="emailid DRvalidate"  value=""/> </div>
+
+                <div class="editor-label">Password</div>
+                <div class="editor-field" ><input class="password DRvalidate" type="password" value=""/></div>
+                <span class="errormessage" style="visibility:hidden">Please enter valid email or password</span>
+                <p> <input type="button" class="loginbutton" value="LOGIN" /><span> <fb:login-button scope="public_profile,email" onlogin="FaceBookAPI.CheckLoginState();"></fb:login-button>
+                    <div id="status"></div>
+                </span></p>
+
+
+            </div>
+        </div>
+
+        <div class="OR">OR</div>*@
+    <div class="register shadow">
+
+        <div class="registerTitle">Register</div>
+
+        <div class="registerData">
+
+
+            <div>
+                <div class="previewImage shadow">
+                    <img class="user_profile_image">
+                    <div class="user_profile_image_loader"></div>
+                </div>
+            </div>
+
+
+            <div>
+                <div class="editor-label">  First name*  </div>
+                <div class="editor-field ">  <input class="firstname DRvalidate" value="" /> </div>
+
+                <div class="editor-label"> Middle name </div>
+                <div class="editor-field"> <input class="middlename" value="" /> </div>
+
+                <div class="editor-label"> Last name*</div>
+                <div class="editor-field "><input class="lastname DRvalidate" value="" /> </div>
+
+                <div class="editor-label">Email id*</div>
+                <div class="editor-field "><input class="emailid DRvalidate" value="" /> </div>
+
+                <div class="editor-label">Password*</div>
+                <div class="editor-field "><input class="password DRvalidate" type="password" value="" />  </div>
+
+                <div class="editor-label "> Re-enter password*</div>
+                <div class="editor-field "> <input class=" repassword DRvalidate" type="password" value="" /></div>
+                <span class="errormessage" style="visibility:hidden">Please enter valid details</span>
+                <span class="open-site" data-openId="0" data-siteId="0" style="visibility:hidden">Please enter valid details</span>
+                @* Image Uploader *@
+
+                <div style="float: right;color: black !important;margin-right: 17px">
+                    <div>
+                        <label class="file_name">Change Image</label>
+                        <span class="fileuploadSpan glyphicon glyphicon-cloud-upload" style="cursor: pointer;">
+                            @*<input id="fileupload" type="file" name="files[]" multiple  style="display:none;">*@
+                        </span>
+                        <input id="fileupload" type="file" name="files[]" multiple style="display:none">
+
+                        @*<div>
+                                <span class="file_name">upload image</span>
+
+                                <span class="btn btn-success fileinput-button" style="left: 205px;">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                    <span>Upload</span>
+                                    <input id="fileupload" type="file" name="files[]" multiple >
+                                </span>
+
+
+                            </div>*@
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div>
+                    <input type="button" class="registerbutton" value="Create" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+@*<div class="sitedescription">
+
+    </div>*@
+@*</div>*@
+
+@*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@
+
+@Styles.Render("~/Content/Diary.User")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryui")
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/Diary")
+    @Scripts.Render("~/bundles/Diary.User")
+
+}

@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Test Page";
+}
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.1/css/select.dataTables.min.css">
+
+@* ------------ https://www.w3schools.com/bootstrap/bootstrap_tabs_pills.asp ------------------------- *@
+
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Jquery</a></li>
+    <li><a data-toggle="tab" href="#menu1">Angular </a></li>
+    <li><a data-toggle="tab" href="#menu2">Angular 2</a></li>
+    <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+</ul>
+
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <div class="row-fluid">
+                <h3>Learning Jquery DataTable.net</h3>
+                <button class="applyAllFilters">Apply</button>
+                <table id="tblExpenses"> </table>
+            </div>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3>Menu 1</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <h3>Menu 2</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+            <h3>Menu 3</h3>
+            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+    </div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryui")
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/select/1.2.1/js/dataTables.select.min.js"></script>
+
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/bootstrap.ui")
+<script type="text/javascript" src="~/Scripts/Diary/Test/diary.test.datatable.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+
+@*@Styles.Render("~/Content/Diary.Home")
+    @Scripts.Render("~/bundles/Diary.Home")*@

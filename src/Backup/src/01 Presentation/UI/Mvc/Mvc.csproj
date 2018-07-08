@@ -1,0 +1,2253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49B28E79-2C82-4B6E-A9A9-C4ED7BFE7CC0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyDiary.UI</RootNamespace>
+    <AssemblyName>MyDiary.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>F:\MyProjects\02 PITS\MyDiary\Backup7\</UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="dotless.Core, Version=1.5.2.0, Culture=neutral, PublicKeyToken=96b446c9e63eae34, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\dotless.1.5.2\lib\dotless.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentNLog, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\FluentNLog.1.0.0\lib\net40\FluentNLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Ninject.MVC3.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NLog.4.3.7\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization.Less, Version=1.3.0.0, Culture=neutral, PublicKeyToken=9b7581e0240fe480, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Web.Optimization.Less.1.3.4\lib\net40\System.Web.Optimization.Less.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivator, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\WebActivator.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\WebActivatorEx.2.1.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Content Include="Content\AngularJS\Chart\angular-chart.css" />
+    <Content Include="Content\AngularJS\UI\Modal\ui.modal.css" />
+    <Content Include="Content\bootstrap-switch\bootstrap2\bootstrap-switch.css" />
+    <Content Include="Content\bootstrap-switch\bootstrap2\bootstrap-switch.min.css" />
+    <Content Include="Content\bootstrap-switch\bootstrap3\bootstrap-switch.css" />
+    <Content Include="Content\bootstrap-switch\bootstrap3\bootstrap-switch.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Bootstrap\Switch\bootstrap2\bootstrap-switch.css" />
+    <Content Include="Content\Bootstrap\Switch\bootstrap2\bootstrap-switch.min.css" />
+    <Content Include="Content\Bootstrap\Switch\bootstrap3\bootstrap-switch.css" />
+    <Content Include="Content\Bootstrap\Switch\bootstrap3\bootstrap-switch.min.css" />
+    <Content Include="Content\Diary\Templates\customPopOverContentTemplate.html" />
+    <Content Include="Content\Diary\Templates\jobDetails.html" />
+    <Content Include="Content\Diary\Templates\customPopOverTemplate.html" />
+    <Compile Include="ControllerHelpers\CookieHelpers.cs" />
+    <Compile Include="ControllerHelpers\ExpenseControllerHelper.cs" />
+    <Compile Include="ControllerHelpers\ImageHelper.cs" />
+    <Compile Include="ControllerHelpers\IncomeControllerHelper.cs" />
+    <Compile Include="ControllerHelpers\PagingHelpers.cs" />
+    <Compile Include="ControllerHelpers\SessionHelpers.cs" />
+    <Compile Include="Controllers\BootStrapController.cs" />
+    <Compile Include="Controllers\Expenses\ExpenseController.cs" />
+    <Compile Include="Controllers\Home\HomeController.cs" />
+    <Compile Include="Controllers\Test\TestController.cs" />
+    <Compile Include="Filters\AuthorizeLoginUser.cs" />
+    <Compile Include="ViewModels\CustomError.cs" />
+    <Compile Include="ViewModels\Expense\ExpenseFilterViewModel.cs" />
+    <Compile Include="ViewModels\Expense\ExpenseSummaryViewModel.cs" />
+    <Compile Include="ViewModels\ImageViewModel.cs" />
+    <Compile Include="Controllers\Income\IncomeController.cs" />
+    <Compile Include="Controllers\PeopleController.cs" />
+    <Compile Include="Controllers\ToolBox\ToolBoxController.cs" />
+    <Compile Include="Filters\AuthenticateUsers.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ButtonViewModel.cs" />
+    <Compile Include="ViewModels\ExpenseDetailsViewModel.cs" />
+    <Compile Include="ViewModels\ExpenseTypeViewModel.cs" />
+    <Compile Include="ViewModels\ExpenseViewModel.cs" />
+    <Compile Include="ViewModels\IncomeTypeViewModel.cs" />
+    <Compile Include="ViewModels\IncomeViewModel.cs" />
+    <Compile Include="ViewModels\Income\IncomeFilterViewModel.cs" />
+    <Compile Include="ViewModels\Income\IncomeSummaryViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\OpenLoginViewModel.cs" />
+    <Compile Include="ViewModels\Paging\PagingViewModel.cs" />
+    <Compile Include="ViewModels\PopupPartialViewModel.cs" />
+    <Compile Include="ViewModels\RoleViewModel.cs" />
+    <Compile Include="ViewModels\TestViewModel.cs" />
+    <Compile Include="ViewModels\Test\JqueryDataTable\Class1.cs" />
+    <Compile Include="ViewModels\Test\JqueryDataTable\JqueryDataTable.cs" />
+    <Compile Include="ViewModels\ToolBox\ToolBoxActions.cs" />
+    <Compile Include="ViewModels\ToolBox\ToolBoxViewModel.cs" />
+    <Compile Include="ViewModels\UploadFilesViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\AngularJS\UI\Select\ui.select.css" />
+    <Content Include="Content\Diary\diary.expenses.css" />
+    <Content Include="Content\Diary\diary.user.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Bootstrap\Select2\select2-bootstrap.css" />
+    <Content Include="Content\Bootstrap\Select\bootstrap-select.css" />
+    <Content Include="Content\Bootstrap\Select\bootstrap-select.min.css" />
+    <Content Include="Content\Diary\UserImages\00000000-0000-0000-0000-000000000000\user-default-men-160.png" />
+    <Content Include="Content\Bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\Bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Content\Bootstrap\bootstrap.css" />
+    <Content Include="Content\Bootstrap\bootstrap.min.css" />
+    <Content Include="Content\Diary\Common\DRNotify.Messages.css" />
+    <Content Include="Content\Diary\Common\DRPopup.css" />
+    <Content Include="Content\Diary\diary.incomes.css" />
+    <Content Include="Content\Diary\Test\diary.test.angular.css" />
+    <Content Include="Content\Diary\UserImages\00000000-0000-0000-0000-000000000000\user-default-women-160.png" />
+    <Content Include="Content\AngularJS\Ng-Grid\ng-grid.css" />
+    <Content Include="Content\AngularJS\Ng-Grid\ng-grid.min.css" />
+    <Content Include="Content\Select2\select2.css" />
+    <Content Include="Content\Select2\select2.png" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\jquery.fileupload.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\calender.gif" />
+    <Content Include="Images\Diary\ajax-loader.gif" />
+    <Content Include="Images\Diary\close.jpg" />
+    <Content Include="Images\Diary\loading.gif" />
+    <Content Include="Images\page-bg.jpg" />
+    <Content Include="Images\stockexchange.jpg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Controllers\Test\dataTable.json" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="node_modules\%40angular\common\bundles\common-testing.umd.js" />
+    <Content Include="node_modules\%40angular\common\bundles\common.umd.js" />
+    <Content Include="node_modules\%40angular\common\bundles\common.umd.min.js" />
+    <Content Include="node_modules\%40angular\common\index.js" />
+    <Content Include="node_modules\%40angular\common\src\common.js" />
+    <Content Include="node_modules\%40angular\common\src\common_module.js" />
+    <Content Include="node_modules\%40angular\common\src\directives\index.js" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_class.js" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_for.js" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_if.js" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_plural.js" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_style.js" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_switch.js" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_template_outlet.js" />
+    <Content Include="node_modules\%40angular\common\src\facade\async.js" />
+    <Content Include="node_modules\%40angular\common\src\facade\collection.js" />
+    <Content Include="node_modules\%40angular\common\src\facade\errors.js" />
+    <Content Include="node_modules\%40angular\common\src\facade\lang.js" />
+    <Content Include="node_modules\%40angular\common\src\localization.js" />
+    <Content Include="node_modules\%40angular\common\src\location\hash_location_strategy.js" />
+    <Content Include="node_modules\%40angular\common\src\location\index.js" />
+    <Content Include="node_modules\%40angular\common\src\location\location.js" />
+    <Content Include="node_modules\%40angular\common\src\location\location_strategy.js" />
+    <Content Include="node_modules\%40angular\common\src\location\path_location_strategy.js" />
+    <Content Include="node_modules\%40angular\common\src\location\platform_location.js" />
+    <Content Include="node_modules\%40angular\common\src\pipes\async_pipe.js" />
+    <Content Include="node_modules\%40angular\common\src\pipes\date_pipe.js" />
+    <Content Include="node_modules\%40angular\common\src\pipes\i18n_plural_pipe.js" />
+    <Content Include="node_modules\%40angular\common\src\pipes\i18n_select_pipe.js" />
+    <Content Include="node_modules\%40angular\common\src\pipes\index.js" />
+    <Content Include="node_modules\%40angular\common\src\pipes\intl.js" />
+    <Content Include="node_modules\%40angular\common\src\pipes\invalid_pipe_argument_error.js" />
+    <Content Include="node_modules\%40angular\common\src\pipes\json_pipe.js" />
+    <Content Include="node_modules\%40angular\common\src\pipes\lowercase_pipe.js" />
+    <Content Include="node_modules\%40angular\common\src\pipes\number_pipe.js" />
+    <Content Include="node_modules\%40angular\common\src\pipes\slice_pipe.js" />
+    <Content Include="node_modules\%40angular\common\src\pipes\uppercase_pipe.js" />
+    <Content Include="node_modules\%40angular\common\src\private_import_core.js" />
+    <Content Include="node_modules\%40angular\common\src\version.js" />
+    <Content Include="node_modules\%40angular\common\testing\index.js" />
+    <Content Include="node_modules\%40angular\common\testing\location_mock.js" />
+    <Content Include="node_modules\%40angular\common\testing\mock_location_strategy.js" />
+    <Content Include="node_modules\%40angular\compiler\bundles\compiler-testing.umd.js" />
+    <Content Include="node_modules\%40angular\compiler\bundles\compiler.umd.js" />
+    <Content Include="node_modules\%40angular\compiler\bundles\compiler.umd.min.js" />
+    <Content Include="node_modules\%40angular\compiler\index.js" />
+    <Content Include="node_modules\%40angular\compiler\src\animation\animation_ast.js" />
+    <Content Include="node_modules\%40angular\compiler\src\animation\animation_compiler.js" />
+    <Content Include="node_modules\%40angular\compiler\src\animation\animation_parser.js" />
+    <Content Include="node_modules\%40angular\compiler\src\animation\styles_collection.js" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\compiler.js" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\compiler_factory.js" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\compiler_host.js" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\compiler_options.js" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\generated_file.js" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\static_reflection_capabilities.js" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\static_reflector.js" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\static_symbol.js" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\static_symbol_resolver.js" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\summary_resolver.js" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\summary_serializer.js" />
+    <Content Include="node_modules\%40angular\compiler\src\assertions.js" />
+    <Content Include="node_modules\%40angular\compiler\src\chars.js" />
+    <Content Include="node_modules\%40angular\compiler\src\compiler_util\binding_util.js" />
+    <Content Include="node_modules\%40angular\compiler\src\compiler_util\expression_converter.js" />
+    <Content Include="node_modules\%40angular\compiler\src\compiler_util\identifier_util.js" />
+    <Content Include="node_modules\%40angular\compiler\src\compiler_util\render_util.js" />
+    <Content Include="node_modules\%40angular\compiler\src\compile_metadata.js" />
+    <Content Include="node_modules\%40angular\compiler\src\config.js" />
+    <Content Include="node_modules\%40angular\compiler\src\directive_normalizer.js" />
+    <Content Include="node_modules\%40angular\compiler\src\directive_resolver.js" />
+    <Content Include="node_modules\%40angular\compiler\src\directive_wrapper_compiler.js" />
+    <Content Include="node_modules\%40angular\compiler\src\expression_parser\ast.js" />
+    <Content Include="node_modules\%40angular\compiler\src\expression_parser\lexer.js" />
+    <Content Include="node_modules\%40angular\compiler\src\expression_parser\parser.js" />
+    <Content Include="node_modules\%40angular\compiler\src\facade\collection.js" />
+    <Content Include="node_modules\%40angular\compiler\src\facade\errors.js" />
+    <Content Include="node_modules\%40angular\compiler\src\facade\lang.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\digest.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\extractor.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\extractor_merger.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\i18n_ast.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\i18n_html_parser.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\i18n_parser.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\index.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\message_bundle.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\parse_util.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\placeholder.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\serializer.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\xliff.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\xmb.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\xml_helper.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\xtb.js" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\translation_bundle.js" />
+    <Content Include="node_modules\%40angular\compiler\src\identifiers.js" />
+    <Content Include="node_modules\%40angular\compiler\src\injectable.js" />
+    <Content Include="node_modules\%40angular\compiler\src\jit\compiler.js" />
+    <Content Include="node_modules\%40angular\compiler\src\jit\compiler_factory.js" />
+    <Content Include="node_modules\%40angular\compiler\src\lifecycle_reflector.js" />
+    <Content Include="node_modules\%40angular\compiler\src\metadata_resolver.js" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\ast.js" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\html_parser.js" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\html_tags.js" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\icu_ast_expander.js" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\interpolation_config.js" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\lexer.js" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\parser.js" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\tags.js" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\xml_parser.js" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\xml_tags.js" />
+    <Content Include="node_modules\%40angular\compiler\src\ng_module_compiler.js" />
+    <Content Include="node_modules\%40angular\compiler\src\ng_module_resolver.js" />
+    <Content Include="node_modules\%40angular\compiler\src\output\abstract_emitter.js" />
+    <Content Include="node_modules\%40angular\compiler\src\output\abstract_js_emitter.js" />
+    <Content Include="node_modules\%40angular\compiler\src\output\class_builder.js" />
+    <Content Include="node_modules\%40angular\compiler\src\output\output_ast.js" />
+    <Content Include="node_modules\%40angular\compiler\src\output\output_interpreter.js" />
+    <Content Include="node_modules\%40angular\compiler\src\output\output_jit.js" />
+    <Content Include="node_modules\%40angular\compiler\src\output\path_util.js" />
+    <Content Include="node_modules\%40angular\compiler\src\output\ts_emitter.js" />
+    <Content Include="node_modules\%40angular\compiler\src\output\value_util.js" />
+    <Content Include="node_modules\%40angular\compiler\src\parse_util.js" />
+    <Content Include="node_modules\%40angular\compiler\src\pipe_resolver.js" />
+    <Content Include="node_modules\%40angular\compiler\src\private_import_core.js" />
+    <Content Include="node_modules\%40angular\compiler\src\provider_analyzer.js" />
+    <Content Include="node_modules\%40angular\compiler\src\resource_loader.js" />
+    <Content Include="node_modules\%40angular\compiler\src\schema\dom_element_schema_registry.js" />
+    <Content Include="node_modules\%40angular\compiler\src\schema\dom_security_schema.js" />
+    <Content Include="node_modules\%40angular\compiler\src\schema\element_schema_registry.js" />
+    <Content Include="node_modules\%40angular\compiler\src\selector.js" />
+    <Content Include="node_modules\%40angular\compiler\src\shadow_css.js" />
+    <Content Include="node_modules\%40angular\compiler\src\style_compiler.js" />
+    <Content Include="node_modules\%40angular\compiler\src\style_url_resolver.js" />
+    <Content Include="node_modules\%40angular\compiler\src\summary_resolver.js" />
+    <Content Include="node_modules\%40angular\compiler\src\template_parser\binding_parser.js" />
+    <Content Include="node_modules\%40angular\compiler\src\template_parser\template_ast.js" />
+    <Content Include="node_modules\%40angular\compiler\src\template_parser\template_parser.js" />
+    <Content Include="node_modules\%40angular\compiler\src\template_parser\template_preparser.js" />
+    <Content Include="node_modules\%40angular\compiler\src\url_resolver.js" />
+    <Content Include="node_modules\%40angular\compiler\src\util.js" />
+    <Content Include="node_modules\%40angular\compiler\src\version.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_element.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_method.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_pipe.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_query.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_view.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\constants.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\deps.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\event_binder.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\lifecycle_binder.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\property_binder.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\query_binder.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\util.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\view_binder.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\view_builder.js" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\view_compiler.js" />
+    <Content Include="node_modules\%40angular\compiler\testing\directive_resolver_mock.js" />
+    <Content Include="node_modules\%40angular\compiler\testing\facade\lang.js" />
+    <Content Include="node_modules\%40angular\compiler\testing\index.js" />
+    <Content Include="node_modules\%40angular\compiler\testing\metadata_overrider.js" />
+    <Content Include="node_modules\%40angular\compiler\testing\ng_module_resolver_mock.js" />
+    <Content Include="node_modules\%40angular\compiler\testing\pipe_resolver_mock.js" />
+    <Content Include="node_modules\%40angular\compiler\testing\private_import_core.js" />
+    <Content Include="node_modules\%40angular\compiler\testing\schema_registry_mock.js" />
+    <Content Include="node_modules\%40angular\core\bundles\core-testing.umd.js" />
+    <Content Include="node_modules\%40angular\core\bundles\core.umd.js" />
+    <Content Include="node_modules\%40angular\core\bundles\core.umd.min.js" />
+    <Content Include="node_modules\%40angular\core\index.js" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_constants.js" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_group_player.js" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_keyframe.js" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_player.js" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_queue.js" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_sequence_player.js" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_styles.js" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_style_util.js" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_transition.js" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_transition_event.js" />
+    <Content Include="node_modules\%40angular\core\src\animation\metadata.js" />
+    <Content Include="node_modules\%40angular\core\src\animation\view_animation_map.js" />
+    <Content Include="node_modules\%40angular\core\src\application_init.js" />
+    <Content Include="node_modules\%40angular\core\src\application_module.js" />
+    <Content Include="node_modules\%40angular\core\src\application_ref.js" />
+    <Content Include="node_modules\%40angular\core\src\application_tokens.js" />
+    <Content Include="node_modules\%40angular\core\src\change_detection.js" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\change_detection.js" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\change_detection_util.js" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\change_detector_ref.js" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\constants.js" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\differs\default_iterable_differ.js" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\differs\default_keyvalue_differ.js" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\differs\iterable_differs.js" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\differs\keyvalue_differs.js" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\pipe_transform.js" />
+    <Content Include="node_modules\%40angular\core\src\console.js" />
+    <Content Include="node_modules\%40angular\core\src\core.js" />
+    <Content Include="node_modules\%40angular\core\src\core_private_export.js" />
+    <Content Include="node_modules\%40angular\core\src\debug\debug_node.js" />
+    <Content Include="node_modules\%40angular\core\src\debug\debug_renderer.js" />
+    <Content Include="node_modules\%40angular\core\src\di.js" />
+    <Content Include="node_modules\%40angular\core\src\di\forward_ref.js" />
+    <Content Include="node_modules\%40angular\core\src\di\injector.js" />
+    <Content Include="node_modules\%40angular\core\src\di\metadata.js" />
+    <Content Include="node_modules\%40angular\core\src\di\opaque_token.js" />
+    <Content Include="node_modules\%40angular\core\src\di\provider.js" />
+    <Content Include="node_modules\%40angular\core\src\di\reflective_errors.js" />
+    <Content Include="node_modules\%40angular\core\src\di\reflective_injector.js" />
+    <Content Include="node_modules\%40angular\core\src\di\reflective_key.js" />
+    <Content Include="node_modules\%40angular\core\src\di\reflective_provider.js" />
+    <Content Include="node_modules\%40angular\core\src\error_handler.js" />
+    <Content Include="node_modules\%40angular\core\src\facade\async.js" />
+    <Content Include="node_modules\%40angular\core\src\facade\collection.js" />
+    <Content Include="node_modules\%40angular\core\src\facade\errors.js" />
+    <Content Include="node_modules\%40angular\core\src\facade\lang.js" />
+    <Content Include="node_modules\%40angular\core\src\i18n\tokens.js" />
+    <Content Include="node_modules\%40angular\core\src\linker.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\animation_view_context.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\compiler.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\component_factory.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\component_factory_resolver.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\debug_context.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\element_injector.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\element_ref.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\errors.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\ng_module_factory.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\ng_module_factory_loader.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\query_list.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\system_js_ng_module_factory_loader.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\template_ref.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\view.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_container.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_container_ref.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_ref.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_type.js" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_utils.js" />
+    <Content Include="node_modules\%40angular\core\src\metadata.js" />
+    <Content Include="node_modules\%40angular\core\src\metadata\di.js" />
+    <Content Include="node_modules\%40angular\core\src\metadata\directives.js" />
+    <Content Include="node_modules\%40angular\core\src\metadata\lifecycle_hooks.js" />
+    <Content Include="node_modules\%40angular\core\src\metadata\ng_module.js" />
+    <Content Include="node_modules\%40angular\core\src\metadata\view.js" />
+    <Content Include="node_modules\%40angular\core\src\platform_core_providers.js" />
+    <Content Include="node_modules\%40angular\core\src\profile\profile.js" />
+    <Content Include="node_modules\%40angular\core\src\profile\wtf_impl.js" />
+    <Content Include="node_modules\%40angular\core\src\reflection\platform_reflection_capabilities.js" />
+    <Content Include="node_modules\%40angular\core\src\reflection\reflection.js" />
+    <Content Include="node_modules\%40angular\core\src\reflection\reflection_capabilities.js" />
+    <Content Include="node_modules\%40angular\core\src\reflection\reflector.js" />
+    <Content Include="node_modules\%40angular\core\src\reflection\reflector_reader.js" />
+    <Content Include="node_modules\%40angular\core\src\reflection\types.js" />
+    <Content Include="node_modules\%40angular\core\src\render.js" />
+    <Content Include="node_modules\%40angular\core\src\render\api.js" />
+    <Content Include="node_modules\%40angular\core\src\security.js" />
+    <Content Include="node_modules\%40angular\core\src\testability\testability.js" />
+    <Content Include="node_modules\%40angular\core\src\type.js" />
+    <Content Include="node_modules\%40angular\core\src\util.js" />
+    <Content Include="node_modules\%40angular\core\src\util\decorators.js" />
+    <Content Include="node_modules\%40angular\core\src\util\lang.js" />
+    <Content Include="node_modules\%40angular\core\src\version.js" />
+    <Content Include="node_modules\%40angular\core\src\zone.js" />
+    <Content Include="node_modules\%40angular\core\src\zone\ng_zone.js" />
+    <Content Include="node_modules\%40angular\core\testing\async.js" />
+    <Content Include="node_modules\%40angular\core\testing\async_test_completer.js" />
+    <Content Include="node_modules\%40angular\core\testing\component_fixture.js" />
+    <Content Include="node_modules\%40angular\core\testing\facade\errors.js" />
+    <Content Include="node_modules\%40angular\core\testing\facade\lang.js" />
+    <Content Include="node_modules\%40angular\core\testing\fake_async.js" />
+    <Content Include="node_modules\%40angular\core\testing\index.js" />
+    <Content Include="node_modules\%40angular\core\testing\metadata_override.js" />
+    <Content Include="node_modules\%40angular\core\testing\mock_animation_player.js" />
+    <Content Include="node_modules\%40angular\core\testing\private_export_testing.js" />
+    <Content Include="node_modules\%40angular\core\testing\testing.js" />
+    <Content Include="node_modules\%40angular\core\testing\test_bed.js" />
+    <Content Include="node_modules\%40angular\core\testing\test_compiler.js" />
+    <Content Include="node_modules\%40angular\forms\bundles\forms.umd.js" />
+    <Content Include="node_modules\%40angular\forms\bundles\forms.umd.min.js" />
+    <Content Include="node_modules\%40angular\forms\index.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\abstract_control_directive.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\abstract_form_group_directive.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\checkbox_value_accessor.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\control_container.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\control_value_accessor.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\default_value_accessor.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\error_examples.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\form_interface.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_control.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_control_status.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_form.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_model.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_model_group.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\normalize_validator.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\number_value_accessor.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\radio_control_value_accessor.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\range_value_accessor.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_control_directive.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_control_name.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_group_directive.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_group_name.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_errors.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\select_control_value_accessor.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\select_multiple_control_value_accessor.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\shared.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\template_driven_errors.js" />
+    <Content Include="node_modules\%40angular\forms\src\directives\validators.js" />
+    <Content Include="node_modules\%40angular\forms\src\facade\async.js" />
+    <Content Include="node_modules\%40angular\forms\src\facade\collection.js" />
+    <Content Include="node_modules\%40angular\forms\src\facade\lang.js" />
+    <Content Include="node_modules\%40angular\forms\src\forms.js" />
+    <Content Include="node_modules\%40angular\forms\src\form_builder.js" />
+    <Content Include="node_modules\%40angular\forms\src\form_providers.js" />
+    <Content Include="node_modules\%40angular\forms\src\model.js" />
+    <Content Include="node_modules\%40angular\forms\src\private_import_core.js" />
+    <Content Include="node_modules\%40angular\forms\src\validators.js" />
+    <Content Include="node_modules\%40angular\forms\src\version.js" />
+    <Content Include="node_modules\%40angular\http\bundles\http-testing.umd.js" />
+    <Content Include="node_modules\%40angular\http\bundles\http.umd.js" />
+    <Content Include="node_modules\%40angular\http\bundles\http.umd.min.js" />
+    <Content Include="node_modules\%40angular\http\index.js" />
+    <Content Include="node_modules\%40angular\http\src\backends\browser_jsonp.js" />
+    <Content Include="node_modules\%40angular\http\src\backends\browser_xhr.js" />
+    <Content Include="node_modules\%40angular\http\src\backends\jsonp_backend.js" />
+    <Content Include="node_modules\%40angular\http\src\backends\xhr_backend.js" />
+    <Content Include="node_modules\%40angular\http\src\base_request_options.js" />
+    <Content Include="node_modules\%40angular\http\src\base_response_options.js" />
+    <Content Include="node_modules\%40angular\http\src\body.js" />
+    <Content Include="node_modules\%40angular\http\src\enums.js" />
+    <Content Include="node_modules\%40angular\http\src\headers.js" />
+    <Content Include="node_modules\%40angular\http\src\http.js" />
+    <Content Include="node_modules\%40angular\http\src\http_module.js" />
+    <Content Include="node_modules\%40angular\http\src\http_utils.js" />
+    <Content Include="node_modules\%40angular\http\src\index.js" />
+    <Content Include="node_modules\%40angular\http\src\interfaces.js" />
+    <Content Include="node_modules\%40angular\http\src\static_request.js" />
+    <Content Include="node_modules\%40angular\http\src\static_response.js" />
+    <Content Include="node_modules\%40angular\http\src\url_search_params.js" />
+    <Content Include="node_modules\%40angular\http\src\version.js" />
+    <Content Include="node_modules\%40angular\http\testing\index.js" />
+    <Content Include="node_modules\%40angular\http\testing\mock_backend.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\bundles\platform-browser-dynamic-testing.umd.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\bundles\platform-browser-dynamic.umd.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\bundles\platform-browser-dynamic.umd.min.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\index.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\facade\lang.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\platform-browser-dynamic.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\platform_providers.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\private_export.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\private_import_platform-browser.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\resource_loader\resource_loader_cache.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\resource_loader\resource_loader_impl.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\version.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\dom_test_component_renderer.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\index.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\private_export_testing.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\private_import_platform-browser-dynamic.js" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\private_import_platform-browser.js" />
+    <Content Include="node_modules\%40angular\platform-browser\bundles\platform-browser-testing.umd.js" />
+    <Content Include="node_modules\%40angular\platform-browser\bundles\platform-browser.umd.js" />
+    <Content Include="node_modules\%40angular\platform-browser\bundles\platform-browser.umd.min.js" />
+    <Content Include="node_modules\%40angular\platform-browser\index.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\browser_adapter.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\generic_browser_adapter.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\location\browser_platform_location.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\location\history.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\testability.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\title.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\tools\common_tools.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\tools\tools.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\animation_driver.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\debug\by.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\debug\ng_probe.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\dom_adapter.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\dom_animate_player.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\dom_renderer.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\dom_tokens.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\events\dom_events.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\events\event_manager.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\events\hammer_gestures.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\events\key_events.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\shared_styles_host.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\util.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\web_animations_driver.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\web_animations_player.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\facade\browser.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\facade\collection.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\facade\lang.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\platform-browser.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\private_export.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\private_import_core.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\security\dom_sanitization_service.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\security\html_sanitizer.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\security\style_sanitizer.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\security\url_sanitizer.js" />
+    <Content Include="node_modules\%40angular\platform-browser\src\version.js" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\browser.js" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\browser_util.js" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\facade\lang.js" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\index.js" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\private_import_platform-browser.js" />
+    <Content Include="node_modules\%40angular\router\bundles\router-testing.umd.js" />
+    <Content Include="node_modules\%40angular\router\bundles\router-upgrade.umd.js" />
+    <Content Include="node_modules\%40angular\router\bundles\router-upgrade.umd.min.js" />
+    <Content Include="node_modules\%40angular\router\bundles\router.umd.js" />
+    <Content Include="node_modules\%40angular\router\bundles\router.umd.min.js" />
+    <Content Include="node_modules\%40angular\router\index.js" />
+    <Content Include="node_modules\%40angular\router\src\apply_redirects.js" />
+    <Content Include="node_modules\%40angular\router\src\config.js" />
+    <Content Include="node_modules\%40angular\router\src\create_router_state.js" />
+    <Content Include="node_modules\%40angular\router\src\create_url_tree.js" />
+    <Content Include="node_modules\%40angular\router\src\directives\router_link.js" />
+    <Content Include="node_modules\%40angular\router\src\directives\router_link_active.js" />
+    <Content Include="node_modules\%40angular\router\src\directives\router_outlet.js" />
+    <Content Include="node_modules\%40angular\router\src\index.js" />
+    <Content Include="node_modules\%40angular\router\src\interfaces.js" />
+    <Content Include="node_modules\%40angular\router\src\private_export.js" />
+    <Content Include="node_modules\%40angular\router\src\private_import_platform-browser.js" />
+    <Content Include="node_modules\%40angular\router\src\recognize.js" />
+    <Content Include="node_modules\%40angular\router\src\router.js" />
+    <Content Include="node_modules\%40angular\router\src\router_config_loader.js" />
+    <Content Include="node_modules\%40angular\router\src\router_module.js" />
+    <Content Include="node_modules\%40angular\router\src\router_outlet_map.js" />
+    <Content Include="node_modules\%40angular\router\src\router_preloader.js" />
+    <Content Include="node_modules\%40angular\router\src\router_state.js" />
+    <Content Include="node_modules\%40angular\router\src\route_reuse_strategy.js" />
+    <Content Include="node_modules\%40angular\router\src\shared.js" />
+    <Content Include="node_modules\%40angular\router\src\url_handling_strategy.js" />
+    <Content Include="node_modules\%40angular\router\src\url_tree.js" />
+    <Content Include="node_modules\%40angular\router\src\utils\collection.js" />
+    <Content Include="node_modules\%40angular\router\src\utils\tree.js" />
+    <Content Include="node_modules\%40angular\router\src\version.js" />
+    <Content Include="node_modules\%40angular\router\testing\index.js" />
+    <Content Include="node_modules\%40angular\router\testing\private_import_router.js" />
+    <Content Include="node_modules\%40angular\router\testing\router_testing_module.js" />
+    <Content Include="node_modules\%40angular\router\upgrade.js" />
+    <Content Include="Scripts\AngularJS\UI\Bootstrap\Switch\angular-bootstrap-switch.js" />
+    <Content Include="Scripts\AngularJS\UI\Bootstrap\Switch\angular-bootstrap-switch.min.js" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="node_modules\%40angular\common\index.js.map" />
+    <Content Include="node_modules\%40angular\common\index.metadata.json" />
+    <Content Include="node_modules\%40angular\common\package.json" />
+    <Content Include="node_modules\%40angular\common\README.md" />
+    <Content Include="node_modules\%40angular\common\src\common.js.map" />
+    <Content Include="node_modules\%40angular\common\src\common.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\common_module.js.map" />
+    <Content Include="node_modules\%40angular\common\src\common_module.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\directives\index.js.map" />
+    <Content Include="node_modules\%40angular\common\src\directives\index.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_class.js.map" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_class.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_for.js.map" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_for.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_if.js.map" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_if.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_plural.js.map" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_plural.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_style.js.map" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_style.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_switch.js.map" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_switch.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_template_outlet.js.map" />
+    <Content Include="node_modules\%40angular\common\src\directives\ng_template_outlet.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\facade\async.js.map" />
+    <Content Include="node_modules\%40angular\common\src\facade\async.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\facade\collection.js.map" />
+    <Content Include="node_modules\%40angular\common\src\facade\collection.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\facade\errors.js.map" />
+    <Content Include="node_modules\%40angular\common\src\facade\errors.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\facade\lang.js.map" />
+    <Content Include="node_modules\%40angular\common\src\facade\lang.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\localization.js.map" />
+    <Content Include="node_modules\%40angular\common\src\localization.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\location\hash_location_strategy.js.map" />
+    <Content Include="node_modules\%40angular\common\src\location\hash_location_strategy.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\location\index.js.map" />
+    <Content Include="node_modules\%40angular\common\src\location\index.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\location\location.js.map" />
+    <Content Include="node_modules\%40angular\common\src\location\location.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\location\location_strategy.js.map" />
+    <Content Include="node_modules\%40angular\common\src\location\location_strategy.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\location\path_location_strategy.js.map" />
+    <Content Include="node_modules\%40angular\common\src\location\path_location_strategy.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\location\platform_location.js.map" />
+    <Content Include="node_modules\%40angular\common\src\location\platform_location.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\pipes\async_pipe.js.map" />
+    <Content Include="node_modules\%40angular\common\src\pipes\async_pipe.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\pipes\date_pipe.js.map" />
+    <Content Include="node_modules\%40angular\common\src\pipes\date_pipe.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\pipes\i18n_plural_pipe.js.map" />
+    <Content Include="node_modules\%40angular\common\src\pipes\i18n_plural_pipe.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\pipes\i18n_select_pipe.js.map" />
+    <Content Include="node_modules\%40angular\common\src\pipes\i18n_select_pipe.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\pipes\index.js.map" />
+    <Content Include="node_modules\%40angular\common\src\pipes\index.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\pipes\intl.js.map" />
+    <Content Include="node_modules\%40angular\common\src\pipes\intl.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\pipes\invalid_pipe_argument_error.js.map" />
+    <Content Include="node_modules\%40angular\common\src\pipes\invalid_pipe_argument_error.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\pipes\json_pipe.js.map" />
+    <Content Include="node_modules\%40angular\common\src\pipes\json_pipe.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\pipes\lowercase_pipe.js.map" />
+    <Content Include="node_modules\%40angular\common\src\pipes\lowercase_pipe.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\pipes\number_pipe.js.map" />
+    <Content Include="node_modules\%40angular\common\src\pipes\number_pipe.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\pipes\slice_pipe.js.map" />
+    <Content Include="node_modules\%40angular\common\src\pipes\slice_pipe.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\pipes\uppercase_pipe.js.map" />
+    <Content Include="node_modules\%40angular\common\src\pipes\uppercase_pipe.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\private_import_core.js.map" />
+    <Content Include="node_modules\%40angular\common\src\private_import_core.metadata.json" />
+    <Content Include="node_modules\%40angular\common\src\version.js.map" />
+    <Content Include="node_modules\%40angular\common\src\version.metadata.json" />
+    <Content Include="node_modules\%40angular\common\testing\index.js.map" />
+    <Content Include="node_modules\%40angular\common\testing\index.metadata.json" />
+    <Content Include="node_modules\%40angular\common\testing\location_mock.js.map" />
+    <Content Include="node_modules\%40angular\common\testing\location_mock.metadata.json" />
+    <Content Include="node_modules\%40angular\common\testing\mock_location_strategy.js.map" />
+    <Content Include="node_modules\%40angular\common\testing\mock_location_strategy.metadata.json" />
+    <Content Include="node_modules\%40angular\common\testing\package.json" />
+    <Content Include="node_modules\%40angular\compiler\index.js.map" />
+    <Content Include="node_modules\%40angular\compiler\index.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\package.json" />
+    <Content Include="node_modules\%40angular\compiler\README.md" />
+    <Content Include="node_modules\%40angular\compiler\src\animation\animation_ast.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\animation\animation_ast.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\animation\animation_compiler.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\animation\animation_compiler.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\animation\animation_parser.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\animation\animation_parser.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\animation\styles_collection.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\animation\styles_collection.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\compiler.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\compiler.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\compiler_factory.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\compiler_factory.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\compiler_host.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\compiler_options.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\generated_file.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\generated_file.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\static_reflection_capabilities.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\static_reflection_capabilities.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\static_reflector.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\static_reflector.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\static_symbol.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\static_symbol.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\static_symbol_resolver.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\static_symbol_resolver.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\summary_resolver.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\summary_resolver.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\summary_serializer.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\aot\summary_serializer.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\assertions.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\assertions.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\chars.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\chars.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\compiler_util\binding_util.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\compiler_util\binding_util.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\compiler_util\expression_converter.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\compiler_util\expression_converter.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\compiler_util\identifier_util.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\compiler_util\identifier_util.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\compiler_util\render_util.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\compiler_util\render_util.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\compile_metadata.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\compile_metadata.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\config.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\config.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\directive_normalizer.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\directive_normalizer.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\directive_resolver.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\directive_resolver.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\directive_wrapper_compiler.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\directive_wrapper_compiler.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\expression_parser\ast.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\expression_parser\ast.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\expression_parser\lexer.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\expression_parser\lexer.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\expression_parser\parser.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\expression_parser\parser.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\facade\collection.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\facade\collection.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\facade\errors.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\facade\errors.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\facade\lang.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\facade\lang.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\digest.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\digest.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\extractor.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\extractor.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\extractor_merger.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\extractor_merger.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\i18n_ast.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\i18n_ast.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\i18n_html_parser.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\i18n_html_parser.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\i18n_parser.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\i18n_parser.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\index.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\index.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\message_bundle.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\message_bundle.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\parse_util.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\parse_util.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\placeholder.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\placeholder.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\serializer.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\xliff.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\xliff.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\xmb.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\xmb.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\xml_helper.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\xml_helper.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\xtb.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\serializers\xtb.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\translation_bundle.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\i18n\translation_bundle.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\identifiers.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\identifiers.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\injectable.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\injectable.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\jit\compiler.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\jit\compiler.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\jit\compiler_factory.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\jit\compiler_factory.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\lifecycle_reflector.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\lifecycle_reflector.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\metadata_resolver.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\metadata_resolver.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\ast.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\ast.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\html_parser.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\html_parser.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\html_tags.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\html_tags.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\icu_ast_expander.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\icu_ast_expander.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\interpolation_config.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\interpolation_config.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\lexer.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\lexer.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\parser.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\parser.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\tags.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\tags.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\xml_parser.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\xml_parser.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\xml_tags.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\ml_parser\xml_tags.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\ng_module_compiler.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\ng_module_compiler.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\ng_module_resolver.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\ng_module_resolver.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\output\abstract_emitter.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\output\abstract_emitter.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\output\abstract_js_emitter.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\output\abstract_js_emitter.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\output\class_builder.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\output\class_builder.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\output\output_ast.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\output\output_ast.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\output\output_interpreter.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\output\output_interpreter.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\output\output_jit.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\output\output_jit.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\output\path_util.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\output\path_util.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\output\ts_emitter.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\output\ts_emitter.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\output\value_util.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\output\value_util.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\parse_util.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\parse_util.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\pipe_resolver.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\pipe_resolver.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\private_import_core.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\private_import_core.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\provider_analyzer.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\provider_analyzer.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\resource_loader.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\resource_loader.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\schema\dom_element_schema_registry.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\schema\dom_element_schema_registry.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\schema\dom_security_schema.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\schema\dom_security_schema.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\schema\element_schema_registry.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\schema\element_schema_registry.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\selector.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\selector.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\shadow_css.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\shadow_css.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\style_compiler.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\style_compiler.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\style_url_resolver.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\style_url_resolver.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\summary_resolver.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\summary_resolver.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\template_parser\binding_parser.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\template_parser\binding_parser.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\template_parser\template_ast.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\template_parser\template_ast.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\template_parser\template_parser.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\template_parser\template_parser.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\template_parser\template_preparser.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\template_parser\template_preparser.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\url_resolver.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\url_resolver.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\util.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\util.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\version.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\version.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_element.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_element.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_method.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_method.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_pipe.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_pipe.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_query.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_query.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_view.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\compile_view.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\constants.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\constants.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\deps.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\deps.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\event_binder.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\event_binder.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\lifecycle_binder.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\lifecycle_binder.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\property_binder.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\property_binder.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\query_binder.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\query_binder.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\util.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\util.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\view_binder.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\view_binder.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\view_builder.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\view_builder.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\view_compiler.js.map" />
+    <Content Include="node_modules\%40angular\compiler\src\view_compiler\view_compiler.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\testing\directive_resolver_mock.js.map" />
+    <Content Include="node_modules\%40angular\compiler\testing\directive_resolver_mock.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\testing\facade\lang.js.map" />
+    <Content Include="node_modules\%40angular\compiler\testing\facade\lang.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\testing\index.js.map" />
+    <Content Include="node_modules\%40angular\compiler\testing\index.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\testing\metadata_overrider.js.map" />
+    <Content Include="node_modules\%40angular\compiler\testing\metadata_overrider.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\testing\ng_module_resolver_mock.js.map" />
+    <Content Include="node_modules\%40angular\compiler\testing\ng_module_resolver_mock.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\testing\package.json" />
+    <Content Include="node_modules\%40angular\compiler\testing\pipe_resolver_mock.js.map" />
+    <Content Include="node_modules\%40angular\compiler\testing\pipe_resolver_mock.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\testing\private_import_core.js.map" />
+    <Content Include="node_modules\%40angular\compiler\testing\private_import_core.metadata.json" />
+    <Content Include="node_modules\%40angular\compiler\testing\schema_registry_mock.js.map" />
+    <Content Include="node_modules\%40angular\compiler\testing\schema_registry_mock.metadata.json" />
+    <Content Include="node_modules\%40angular\core\index.js.map" />
+    <Content Include="node_modules\%40angular\core\index.metadata.json" />
+    <Content Include="node_modules\%40angular\core\package.json" />
+    <Content Include="node_modules\%40angular\core\README.md" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_constants.js.map" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_constants.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_group_player.js.map" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_group_player.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_keyframe.js.map" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_keyframe.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_player.js.map" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_player.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_queue.js.map" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_queue.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_sequence_player.js.map" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_sequence_player.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_styles.js.map" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_styles.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_style_util.js.map" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_style_util.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_transition.js.map" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_transition.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_transition_event.js.map" />
+    <Content Include="node_modules\%40angular\core\src\animation\animation_transition_event.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\animation\metadata.js.map" />
+    <Content Include="node_modules\%40angular\core\src\animation\metadata.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\animation\view_animation_map.js.map" />
+    <Content Include="node_modules\%40angular\core\src\animation\view_animation_map.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\application_init.js.map" />
+    <Content Include="node_modules\%40angular\core\src\application_init.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\application_module.js.map" />
+    <Content Include="node_modules\%40angular\core\src\application_module.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\application_ref.js.map" />
+    <Content Include="node_modules\%40angular\core\src\application_ref.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\application_tokens.js.map" />
+    <Content Include="node_modules\%40angular\core\src\application_tokens.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\change_detection.js.map" />
+    <Content Include="node_modules\%40angular\core\src\change_detection.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\change_detection.js.map" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\change_detection.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\change_detection_util.js.map" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\change_detection_util.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\change_detector_ref.js.map" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\change_detector_ref.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\constants.js.map" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\constants.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\differs\default_iterable_differ.js.map" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\differs\default_iterable_differ.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\differs\default_keyvalue_differ.js.map" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\differs\default_keyvalue_differ.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\differs\iterable_differs.js.map" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\differs\iterable_differs.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\differs\keyvalue_differs.js.map" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\differs\keyvalue_differs.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\change_detection\pipe_transform.js.map" />
+    <Content Include="node_modules\%40angular\core\src\console.js.map" />
+    <Content Include="node_modules\%40angular\core\src\console.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\core.js.map" />
+    <Content Include="node_modules\%40angular\core\src\core.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\core_private_export.js.map" />
+    <Content Include="node_modules\%40angular\core\src\core_private_export.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\debug\debug_node.js.map" />
+    <Content Include="node_modules\%40angular\core\src\debug\debug_node.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\debug\debug_renderer.js.map" />
+    <Content Include="node_modules\%40angular\core\src\debug\debug_renderer.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\di.js.map" />
+    <Content Include="node_modules\%40angular\core\src\di.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\di\forward_ref.js.map" />
+    <Content Include="node_modules\%40angular\core\src\di\forward_ref.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\di\injector.js.map" />
+    <Content Include="node_modules\%40angular\core\src\di\injector.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\di\metadata.js.map" />
+    <Content Include="node_modules\%40angular\core\src\di\metadata.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\di\opaque_token.js.map" />
+    <Content Include="node_modules\%40angular\core\src\di\opaque_token.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\di\provider.js.map" />
+    <Content Include="node_modules\%40angular\core\src\di\reflective_errors.js.map" />
+    <Content Include="node_modules\%40angular\core\src\di\reflective_errors.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\di\reflective_injector.js.map" />
+    <Content Include="node_modules\%40angular\core\src\di\reflective_injector.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\di\reflective_key.js.map" />
+    <Content Include="node_modules\%40angular\core\src\di\reflective_key.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\di\reflective_provider.js.map" />
+    <Content Include="node_modules\%40angular\core\src\di\reflective_provider.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\error_handler.js.map" />
+    <Content Include="node_modules\%40angular\core\src\error_handler.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\facade\async.js.map" />
+    <Content Include="node_modules\%40angular\core\src\facade\async.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\facade\collection.js.map" />
+    <Content Include="node_modules\%40angular\core\src\facade\collection.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\facade\errors.js.map" />
+    <Content Include="node_modules\%40angular\core\src\facade\errors.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\facade\lang.js.map" />
+    <Content Include="node_modules\%40angular\core\src\facade\lang.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\i18n\tokens.js.map" />
+    <Content Include="node_modules\%40angular\core\src\i18n\tokens.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\animation_view_context.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\animation_view_context.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\compiler.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\compiler.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\component_factory.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\component_factory.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\component_factory_resolver.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\component_factory_resolver.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\debug_context.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\debug_context.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\element_injector.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\element_injector.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\element_ref.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\element_ref.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\errors.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\errors.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\ng_module_factory.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\ng_module_factory.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\ng_module_factory_loader.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\ng_module_factory_loader.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\query_list.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\query_list.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\system_js_ng_module_factory_loader.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\system_js_ng_module_factory_loader.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\template_ref.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\template_ref.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\view.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\view.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_container.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_container.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_container_ref.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_container_ref.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_ref.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_ref.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_type.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_type.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_utils.js.map" />
+    <Content Include="node_modules\%40angular\core\src\linker\view_utils.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\metadata.js.map" />
+    <Content Include="node_modules\%40angular\core\src\metadata.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\metadata\di.js.map" />
+    <Content Include="node_modules\%40angular\core\src\metadata\di.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\metadata\directives.js.map" />
+    <Content Include="node_modules\%40angular\core\src\metadata\directives.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\metadata\lifecycle_hooks.js.map" />
+    <Content Include="node_modules\%40angular\core\src\metadata\lifecycle_hooks.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\metadata\ng_module.js.map" />
+    <Content Include="node_modules\%40angular\core\src\metadata\ng_module.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\metadata\view.js.map" />
+    <Content Include="node_modules\%40angular\core\src\metadata\view.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\platform_core_providers.js.map" />
+    <Content Include="node_modules\%40angular\core\src\platform_core_providers.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\profile\profile.js.map" />
+    <Content Include="node_modules\%40angular\core\src\profile\profile.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\profile\wtf_impl.js.map" />
+    <Content Include="node_modules\%40angular\core\src\profile\wtf_impl.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\reflection\platform_reflection_capabilities.js.map" />
+    <Content Include="node_modules\%40angular\core\src\reflection\reflection.js.map" />
+    <Content Include="node_modules\%40angular\core\src\reflection\reflection.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\reflection\reflection_capabilities.js.map" />
+    <Content Include="node_modules\%40angular\core\src\reflection\reflection_capabilities.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\reflection\reflector.js.map" />
+    <Content Include="node_modules\%40angular\core\src\reflection\reflector.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\reflection\reflector_reader.js.map" />
+    <Content Include="node_modules\%40angular\core\src\reflection\reflector_reader.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\reflection\types.js.map" />
+    <Content Include="node_modules\%40angular\core\src\render.js.map" />
+    <Content Include="node_modules\%40angular\core\src\render.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\render\api.js.map" />
+    <Content Include="node_modules\%40angular\core\src\render\api.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\security.js.map" />
+    <Content Include="node_modules\%40angular\core\src\security.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\testability\testability.js.map" />
+    <Content Include="node_modules\%40angular\core\src\testability\testability.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\type.js.map" />
+    <Content Include="node_modules\%40angular\core\src\type.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\util.js.map" />
+    <Content Include="node_modules\%40angular\core\src\util.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\util\decorators.js.map" />
+    <Content Include="node_modules\%40angular\core\src\util\decorators.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\util\lang.js.map" />
+    <Content Include="node_modules\%40angular\core\src\util\lang.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\version.js.map" />
+    <Content Include="node_modules\%40angular\core\src\version.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\zone.js.map" />
+    <Content Include="node_modules\%40angular\core\src\zone.metadata.json" />
+    <Content Include="node_modules\%40angular\core\src\zone\ng_zone.js.map" />
+    <Content Include="node_modules\%40angular\core\src\zone\ng_zone.metadata.json" />
+    <Content Include="node_modules\%40angular\core\testing\async.js.map" />
+    <Content Include="node_modules\%40angular\core\testing\async.metadata.json" />
+    <Content Include="node_modules\%40angular\core\testing\async_test_completer.js.map" />
+    <Content Include="node_modules\%40angular\core\testing\async_test_completer.metadata.json" />
+    <Content Include="node_modules\%40angular\core\testing\component_fixture.js.map" />
+    <Content Include="node_modules\%40angular\core\testing\component_fixture.metadata.json" />
+    <Content Include="node_modules\%40angular\core\testing\facade\errors.js.map" />
+    <Content Include="node_modules\%40angular\core\testing\facade\errors.metadata.json" />
+    <Content Include="node_modules\%40angular\core\testing\facade\lang.js.map" />
+    <Content Include="node_modules\%40angular\core\testing\facade\lang.metadata.json" />
+    <Content Include="node_modules\%40angular\core\testing\fake_async.js.map" />
+    <Content Include="node_modules\%40angular\core\testing\fake_async.metadata.json" />
+    <Content Include="node_modules\%40angular\core\testing\index.js.map" />
+    <Content Include="node_modules\%40angular\core\testing\index.metadata.json" />
+    <Content Include="node_modules\%40angular\core\testing\metadata_override.js.map" />
+    <Content Include="node_modules\%40angular\core\testing\mock_animation_player.js.map" />
+    <Content Include="node_modules\%40angular\core\testing\mock_animation_player.metadata.json" />
+    <Content Include="node_modules\%40angular\core\testing\package.json" />
+    <Content Include="node_modules\%40angular\core\testing\private_export_testing.js.map" />
+    <Content Include="node_modules\%40angular\core\testing\private_export_testing.metadata.json" />
+    <Content Include="node_modules\%40angular\core\testing\testing.js.map" />
+    <Content Include="node_modules\%40angular\core\testing\testing.metadata.json" />
+    <Content Include="node_modules\%40angular\core\testing\test_bed.js.map" />
+    <Content Include="node_modules\%40angular\core\testing\test_bed.metadata.json" />
+    <Content Include="node_modules\%40angular\core\testing\test_compiler.js.map" />
+    <Content Include="node_modules\%40angular\core\testing\test_compiler.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\index.js.map" />
+    <Content Include="node_modules\%40angular\forms\index.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\package.json" />
+    <Content Include="node_modules\%40angular\forms\README.md" />
+    <Content Include="node_modules\%40angular\forms\src\directives.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\abstract_control_directive.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\abstract_control_directive.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\abstract_form_group_directive.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\abstract_form_group_directive.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\checkbox_value_accessor.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\checkbox_value_accessor.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\control_container.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\control_container.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\control_value_accessor.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\control_value_accessor.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\default_value_accessor.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\default_value_accessor.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\error_examples.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\error_examples.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\form_interface.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_control.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_control.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_control_status.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_control_status.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_form.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_form.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_model.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_model.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_model_group.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\ng_model_group.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\normalize_validator.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\normalize_validator.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\number_value_accessor.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\number_value_accessor.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\radio_control_value_accessor.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\radio_control_value_accessor.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\range_value_accessor.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\range_value_accessor.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_control_directive.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_control_directive.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_control_name.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_control_name.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_group_directive.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_group_directive.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_group_name.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_group_name.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_errors.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\reactive_errors.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\select_control_value_accessor.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\select_control_value_accessor.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\select_multiple_control_value_accessor.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\select_multiple_control_value_accessor.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\shared.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\shared.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\template_driven_errors.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\template_driven_errors.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\directives\validators.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\directives\validators.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\facade\async.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\facade\async.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\facade\collection.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\facade\collection.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\facade\lang.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\facade\lang.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\forms.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\forms.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\form_builder.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\form_builder.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\form_providers.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\form_providers.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\model.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\model.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\private_import_core.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\private_import_core.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\validators.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\validators.metadata.json" />
+    <Content Include="node_modules\%40angular\forms\src\version.js.map" />
+    <Content Include="node_modules\%40angular\forms\src\version.metadata.json" />
+    <Content Include="node_modules\%40angular\http\index.js.map" />
+    <Content Include="node_modules\%40angular\http\index.metadata.json" />
+    <Content Include="node_modules\%40angular\http\package.json" />
+    <Content Include="node_modules\%40angular\http\README.md" />
+    <Content Include="node_modules\%40angular\http\src\backends\browser_jsonp.js.map" />
+    <Content Include="node_modules\%40angular\http\src\backends\browser_jsonp.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\backends\browser_xhr.js.map" />
+    <Content Include="node_modules\%40angular\http\src\backends\browser_xhr.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\backends\jsonp_backend.js.map" />
+    <Content Include="node_modules\%40angular\http\src\backends\jsonp_backend.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\backends\xhr_backend.js.map" />
+    <Content Include="node_modules\%40angular\http\src\backends\xhr_backend.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\base_request_options.js.map" />
+    <Content Include="node_modules\%40angular\http\src\base_request_options.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\base_response_options.js.map" />
+    <Content Include="node_modules\%40angular\http\src\base_response_options.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\body.js.map" />
+    <Content Include="node_modules\%40angular\http\src\body.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\enums.js.map" />
+    <Content Include="node_modules\%40angular\http\src\enums.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\headers.js.map" />
+    <Content Include="node_modules\%40angular\http\src\headers.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\http.js.map" />
+    <Content Include="node_modules\%40angular\http\src\http.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\http_module.js.map" />
+    <Content Include="node_modules\%40angular\http\src\http_module.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\http_utils.js.map" />
+    <Content Include="node_modules\%40angular\http\src\http_utils.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\index.js.map" />
+    <Content Include="node_modules\%40angular\http\src\index.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\interfaces.js.map" />
+    <Content Include="node_modules\%40angular\http\src\interfaces.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\static_request.js.map" />
+    <Content Include="node_modules\%40angular\http\src\static_request.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\static_response.js.map" />
+    <Content Include="node_modules\%40angular\http\src\static_response.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\url_search_params.js.map" />
+    <Content Include="node_modules\%40angular\http\src\url_search_params.metadata.json" />
+    <Content Include="node_modules\%40angular\http\src\version.js.map" />
+    <Content Include="node_modules\%40angular\http\src\version.metadata.json" />
+    <Content Include="node_modules\%40angular\http\testing\index.js.map" />
+    <Content Include="node_modules\%40angular\http\testing\index.metadata.json" />
+    <Content Include="node_modules\%40angular\http\testing\mock_backend.js.map" />
+    <Content Include="node_modules\%40angular\http\testing\mock_backend.metadata.json" />
+    <Content Include="node_modules\%40angular\http\testing\package.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\index.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\index.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\package.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\README.md" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\facade\lang.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\facade\lang.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\platform-browser-dynamic.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\platform-browser-dynamic.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\platform_providers.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\platform_providers.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\private_export.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\private_export.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\private_import_platform-browser.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\private_import_platform-browser.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\resource_loader\resource_loader_cache.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\resource_loader\resource_loader_cache.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\resource_loader\resource_loader_impl.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\resource_loader\resource_loader_impl.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\version.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\src\version.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\dom_test_component_renderer.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\dom_test_component_renderer.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\index.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\index.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\package.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\private_export_testing.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\private_export_testing.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\private_import_platform-browser-dynamic.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\private_import_platform-browser-dynamic.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\private_import_platform-browser.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser-dynamic\testing\private_import_platform-browser.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\index.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\index.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\package.json" />
+    <Content Include="node_modules\%40angular\platform-browser\README.md" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\browser_adapter.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\browser_adapter.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\generic_browser_adapter.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\generic_browser_adapter.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\location\browser_platform_location.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\location\browser_platform_location.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\location\history.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\location\history.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\testability.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\testability.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\title.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\title.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\tools\common_tools.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\tools\common_tools.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\tools\tools.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\browser\tools\tools.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\animation_driver.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\animation_driver.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\debug\by.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\debug\by.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\debug\ng_probe.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\debug\ng_probe.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\dom_adapter.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\dom_adapter.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\dom_animate_player.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\dom_renderer.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\dom_renderer.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\dom_tokens.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\dom_tokens.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\events\dom_events.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\events\dom_events.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\events\event_manager.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\events\event_manager.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\events\hammer_gestures.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\events\hammer_gestures.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\events\key_events.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\events\key_events.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\shared_styles_host.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\shared_styles_host.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\util.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\util.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\web_animations_driver.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\web_animations_driver.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\web_animations_player.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\dom\web_animations_player.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\facade\browser.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\facade\browser.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\facade\collection.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\facade\collection.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\facade\lang.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\facade\lang.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\platform-browser.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\platform-browser.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\private_export.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\private_export.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\private_import_core.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\private_import_core.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\security\dom_sanitization_service.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\security\dom_sanitization_service.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\security\html_sanitizer.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\security\html_sanitizer.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\security\style_sanitizer.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\security\style_sanitizer.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\security\url_sanitizer.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\security\url_sanitizer.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\src\version.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\src\version.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\browser.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\browser.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\browser_util.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\browser_util.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\facade\lang.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\facade\lang.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\index.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\index.metadata.json" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\package.json" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\private_import_platform-browser.js.map" />
+    <Content Include="node_modules\%40angular\platform-browser\testing\private_import_platform-browser.metadata.json" />
+    <Content Include="node_modules\%40angular\router\index.js.map" />
+    <Content Include="node_modules\%40angular\router\index.metadata.json" />
+    <Content Include="node_modules\%40angular\router\package.json" />
+    <Content Include="node_modules\%40angular\router\README.md" />
+    <Content Include="node_modules\%40angular\router\src\apply_redirects.js.map" />
+    <Content Include="node_modules\%40angular\router\src\apply_redirects.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\config.js.map" />
+    <Content Include="node_modules\%40angular\router\src\config.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\create_router_state.js.map" />
+    <Content Include="node_modules\%40angular\router\src\create_router_state.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\create_url_tree.js.map" />
+    <Content Include="node_modules\%40angular\router\src\create_url_tree.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\directives\router_link.js.map" />
+    <Content Include="node_modules\%40angular\router\src\directives\router_link.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\directives\router_link_active.js.map" />
+    <Content Include="node_modules\%40angular\router\src\directives\router_link_active.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\directives\router_outlet.js.map" />
+    <Content Include="node_modules\%40angular\router\src\directives\router_outlet.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\index.js.map" />
+    <Content Include="node_modules\%40angular\router\src\index.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\interfaces.js.map" />
+    <Content Include="node_modules\%40angular\router\src\private_export.js.map" />
+    <Content Include="node_modules\%40angular\router\src\private_export.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\private_import_platform-browser.js.map" />
+    <Content Include="node_modules\%40angular\router\src\private_import_platform-browser.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\recognize.js.map" />
+    <Content Include="node_modules\%40angular\router\src\recognize.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\router.js.map" />
+    <Content Include="node_modules\%40angular\router\src\router.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\router_config_loader.js.map" />
+    <Content Include="node_modules\%40angular\router\src\router_config_loader.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\router_module.js.map" />
+    <Content Include="node_modules\%40angular\router\src\router_module.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\router_outlet_map.js.map" />
+    <Content Include="node_modules\%40angular\router\src\router_outlet_map.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\router_preloader.js.map" />
+    <Content Include="node_modules\%40angular\router\src\router_preloader.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\router_state.js.map" />
+    <Content Include="node_modules\%40angular\router\src\router_state.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\route_reuse_strategy.js.map" />
+    <Content Include="node_modules\%40angular\router\src\route_reuse_strategy.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\shared.js.map" />
+    <Content Include="node_modules\%40angular\router\src\shared.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\url_handling_strategy.js.map" />
+    <Content Include="node_modules\%40angular\router\src\url_handling_strategy.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\url_tree.js.map" />
+    <Content Include="node_modules\%40angular\router\src\url_tree.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\utils\collection.js.map" />
+    <Content Include="node_modules\%40angular\router\src\utils\collection.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\utils\tree.js.map" />
+    <Content Include="node_modules\%40angular\router\src\utils\tree.metadata.json" />
+    <Content Include="node_modules\%40angular\router\src\version.js.map" />
+    <Content Include="node_modules\%40angular\router\src\version.metadata.json" />
+    <Content Include="node_modules\%40angular\router\testing\index.js.map" />
+    <Content Include="node_modules\%40angular\router\testing\index.metadata.json" />
+    <Content Include="node_modules\%40angular\router\testing\package.json" />
+    <Content Include="node_modules\%40angular\router\testing\private_import_router.js.map" />
+    <Content Include="node_modules\%40angular\router\testing\private_import_router.metadata.json" />
+    <Content Include="node_modules\%40angular\router\testing\router_testing_module.js.map" />
+    <Content Include="node_modules\%40angular\router\testing\router_testing_module.metadata.json" />
+    <Content Include="node_modules\%40angular\router\upgrade.js.map" />
+    <Content Include="node_modules\%40angular\router\upgrade.metadata.json" />
+    <Content Include="node_modules\%40angular\router\upgrade\package.json" />
+    <Content Include="package.json" />
+    <None Include="Scripts\AngularJS\angular.intellisense.js" />
+    <Content Include="Scripts\AngularJS\angular-1.3.20.js" />
+    <Content Include="Scripts\AngularJS\UI\Bootstrap\DatePicker\datepicker.js" />
+    <Content Include="Scripts\AngularJS\UI\Chart\angular-chart.js" />
+    <Content Include="Scripts\AngularJS\UI\Ng-Grid\ng-grid-csv-export.js" />
+    <Content Include="Scripts\AngularJS\UI\Sanitize\angular-sanitize.js" />
+    <Content Include="Scripts\AngularJS\UI\Bootstrap\ui-bootstrap-1.2.16.js" />
+    <Content Include="Scripts\AngularJS\UI\Bootstrap\ui-bootstrap-tpls-0.13.1.js" />
+    <Content Include="Scripts\AngularJS\UI\Select\ui.select.js" />
+    <Content Include="Scripts\bootstrap-switch.js" />
+    <Content Include="Scripts\bootstrap-switch.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap.js" />
+    <Content Include="Scripts\Bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\Bootstrap\UI\Select\bootstrap-select.js" />
+    <Content Include="Scripts\Bootstrap\UI\Select\bootstrap-select.min.js" />
+    <Content Include="Scripts\Bootstrap\UI\Switch\bootstrap-switch.js" />
+    <Content Include="Scripts\Bootstrap\UI\Switch\bootstrap-switch.min.js" />
+    <Content Include="Scripts\ChartJS\Chart.min.js" />
+    <Content Include="Scripts\ChartJS\chart.js" />
+    <Content Include="Scripts\Diary\Angular\Batch\angular-http-batch.js" />
+    <Content Include="Scripts\Diary\Angular\Common\diary.commonModule.js" />
+    <Content Include="Scripts\Diary\Angular\diary.AngularTemplates.js" />
+    <Content Include="Scripts\Diary\Angular\Ui\diary.uiModule.js" />
+    <Content Include="Scripts\Diary\Angular\Ui\diary.uiController.js" />
+    <Content Include="Scripts\Diary\Common\diary.common.js" />
+    <Content Include="Scripts\Diary\Common\diary.enums.js" />
+    <Content Include="Scripts\Diary\Common\diary.ie.js" />
+    <Content Include="Scripts\Diary\Common\diary.layout.js" />
+    <Content Include="Scripts\Diary\Common\diary.validate.js" />
+    <Content Include="Scripts\Diary\Expenses\diary.expenseModule.js" />
+    <Content Include="Scripts\Diary\Home\Angular2\line-chart-demo.html" />
+    <Content Include="Scripts\Angular2\dep\long-stack-trace-zone.js" />
+    <Content Include="Scripts\Angular2\dep\Reflect.js" />
+    <Content Include="Scripts\Angular2\dep\system.js" />
+    <Content Include="Scripts\Angular2\dep\zone.js" />
+    <Content Include="Scripts\Diary\Home\diary.homeKnockOut.js" />
+    <Content Include="Scripts\Diary\Home\diary.homeModule.js" />
+    <Content Include="Scripts\Diary\Home\diary.homeController.js" />
+    <Content Include="Scripts\Diary\Incomes\diary.incomeModule.js" />
+    <Content Include="Scripts\Diary\Angular\diary.AngularModule.js" />
+    <Content Include="Scripts\Diary\Test\diary.test.ngTable.js" />
+    <Content Include="Scripts\Diary\Test\diary.test.datatable.js" />
+    <TypeScriptCompile Include="Scripts\Diary\Test\Vue\diary.test.vue-main.ts" />
+    <Content Include="Scripts\Diary\ToolBox\diary.toolbox.js" />
+    <Content Include="Scripts\Diary\Common\diary.popup.js" />
+    <Content Include="Scripts\Diary\ActivityArea\diary.activityarea.js" />
+    <Content Include="Content\Bootstrap\Select\bootstrap-select.css.map" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Properties\PublishProfiles\MyDiary.pubxml" />
+    <Content Include="Scripts\Diary\Common\diary.alert.js" />
+    <Content Include="Scripts\Diary\Common\diary.error.js" />
+    <Content Include="Scripts\Diary\Common\diary.log.js" />
+    <Content Include="Scripts\Diary\Common\diary.ui.js" />
+    <Content Include="Scripts\Diary\Expenses\diary.expenses.js" />
+    <Content Include="Scripts\Diary\User\diary.image.js" />
+    <Content Include="Scripts\Diary\User\diary.user.js" />
+    <Content Include="Scripts\FaceBookAPI\facebookAPI.js" />
+    <None Include="Scripts\jquery-3.1.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.0.js" />
+    <Content Include="Scripts\jquery-3.1.0.min.js" />
+    <Content Include="Scripts\jquery-3.1.0.slim.js" />
+    <Content Include="Scripts\jquery-3.1.0.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.12.0.js" />
+    <Content Include="Scripts\jquery-ui-1.12.0.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\JQuery\jquery.batch.js" />
+    <Content Include="Scripts\JQuery\JQueryImageResize\jquery.ae.image.resize.js" />
+    <Content Include="Scripts\JQuery\JQueryUI\jquery-ui-1.9.1.js" />
+    <Content Include="Scripts\JQuery\JQueryWidget\jquery.ui.widget.js" />
+    <Content Include="Scripts\JQuery\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\Diary\Incomes\diary.incomeController.js" />
+    <Content Include="Scripts\Bootstrap\UI\Select\bootstrap-select.js.map" />
+    <Content Include="Scripts\Diary\Extensions\dateTime.extension.js" />
+    <Content Include="Scripts\Diary\Expenses\diary.expenseController.js" />
+    <Content Include="Scripts\jquery-3.1.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.0.min.map" />
+    <None Include="Scripts\JQuery\JQueryValidate\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\JQuery\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\JQuery\jquery-2.2.3.js" />
+    <Content Include="Scripts\JQuery\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\JQuery\JQueryFileUploader\jquery.fileupload.js" />
+    <Content Include="Scripts\JQuery\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\JQuery\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\JQuery\JQueryValidate\jquery.validate.js" />
+    <Content Include="Scripts\JQuery\JQueryValidate\jquery.validate.min.js" />
+    <Content Include="Scripts\JQuery\JQueryValidate\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\JQuery\JQueryValidate\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-3.4.0.debug.js" />
+    <Content Include="Scripts\knockout-3.4.0.js" />
+    <Content Include="Scripts\KnockOut\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\KnockOut\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Modernizr\modernizr-2.6.2.js" />
+    <Content Include="Scripts\AngularJS\UI\Ng-Grid\ng-grid.js" />
+    <Content Include="Scripts\AngularJS\UI\Ng-Grid\ng-grid.min.js" />
+    <Content Include="Scripts\Select2\select2.js" />
+    <Content Include="Scripts\Select2\select2.min.js" />
+    <Content Include="Scripts\system.config.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Expense\Legacy\Index.cshtml" />
+    <Content Include="Views\Expense\Shared\_ExpenseTypePartialView.cshtml" />
+    <Content Include="Views\Shared\_ToolBoxPartial.cshtml" />
+    <Content Include="Views\People\AddUser.cshtml" />
+    <Content Include="Views\Income\Index.cshtml" />
+    <Content Include="Views\Expense\Index.cshtml" />
+    <Content Include="tsconfig.json" />
+    <Content Include="Views\Home\Index_Angular1.cshtml" />
+    <Content Include="Views\Test\Index_JqueryDataTable.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Test\Vue\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\Diary\Popup\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\02 Application\Services.Abstract\Services.Abstract.csproj">
+      <Project>{9b354a55-2ebe-4d54-9f1f-a2acea4c68f3}</Project>
+      <Name>Services.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\03 Domain\Domain.Abstract\Domain.Abstract.csproj">
+      <Project>{8bbb2c28-e01c-445a-aa37-43d2ecce01be}</Project>
+      <Name>Domain.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\03 Domain\Domain\Domain.csproj">
+      <Project>{9442db49-5926-45fe-aa55-4d6c0cafb8fc}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\04 DataAccess\MongoProvider\MongoProvider.csproj">
+      <Project>{b160f390-1396-4f2a-9a8e-96b7920408cd}</Project>
+      <Name>MongoProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\02 Application\Services\Services.csproj">
+      <Project>{1492e83b-d25c-4a04-b33c-2d7138880f34}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\04 DataAccess\SqlProvider\SQLProvider.csproj">
+      <Project>{0709ede6-1ccb-44a1-8f80-4e2c85c2320e}</Project>
+      <Name>SQLProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\06 Common\Common\Common.csproj">
+      <Project>{8a6fdcc3-874e-4423-935d-bc1bddf8688d}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="node_modules\%40angular\common\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\common.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\common_module.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\directives\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\directives\ng_class.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\directives\ng_for.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\directives\ng_if.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\directives\ng_plural.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\directives\ng_style.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\directives\ng_switch.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\directives\ng_template_outlet.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\facade\async.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\facade\collection.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\facade\errors.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\facade\lang.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\localization.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\location\hash_location_strategy.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\location\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\location\location.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\location\location_strategy.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\location\path_location_strategy.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\location\platform_location.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\pipes\async_pipe.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\pipes\date_pipe.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\pipes\i18n_plural_pipe.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\pipes\i18n_select_pipe.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\pipes\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\pipes\intl.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\pipes\invalid_pipe_argument_error.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\pipes\json_pipe.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\pipes\lowercase_pipe.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\pipes\number_pipe.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\pipes\slice_pipe.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\pipes\uppercase_pipe.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\private_import_core.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\src\version.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\testing\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\testing\location_mock.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\common\testing\mock_location_strategy.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\animation\animation_ast.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\animation\animation_compiler.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\animation\animation_parser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\animation\styles_collection.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\aot\compiler.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\aot\compiler_factory.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\aot\compiler_host.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\aot\compiler_options.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\aot\generated_file.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\aot\static_reflection_capabilities.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\aot\static_reflector.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\aot\static_symbol.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\aot\static_symbol_resolver.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\aot\summary_resolver.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\aot\summary_serializer.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\assertions.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\chars.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\compiler_util\binding_util.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\compiler_util\expression_converter.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\compiler_util\identifier_util.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\compiler_util\render_util.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\compile_metadata.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\config.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\directive_normalizer.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\directive_resolver.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\directive_wrapper_compiler.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\expression_parser\ast.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\expression_parser\lexer.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\expression_parser\parser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\facade\collection.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\facade\errors.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\facade\lang.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\digest.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\extractor.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\extractor_merger.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\i18n_ast.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\i18n_html_parser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\i18n_parser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\message_bundle.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\parse_util.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\serializers\placeholder.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\serializers\serializer.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\serializers\xliff.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\serializers\xmb.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\serializers\xml_helper.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\serializers\xtb.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\i18n\translation_bundle.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\identifiers.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\injectable.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\jit\compiler.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\jit\compiler_factory.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\lifecycle_reflector.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\metadata_resolver.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\ml_parser\ast.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\ml_parser\html_parser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\ml_parser\html_tags.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\ml_parser\icu_ast_expander.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\ml_parser\interpolation_config.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\ml_parser\lexer.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\ml_parser\parser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\ml_parser\tags.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\ml_parser\xml_parser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\ml_parser\xml_tags.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\ng_module_compiler.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\ng_module_resolver.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\output\abstract_emitter.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\output\abstract_js_emitter.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\output\class_builder.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\output\output_ast.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\output\output_interpreter.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\output\output_jit.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\output\path_util.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\output\ts_emitter.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\output\value_util.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\parse_util.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\pipe_resolver.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\private_import_core.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\provider_analyzer.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\resource_loader.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\schema\dom_element_schema_registry.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\schema\dom_security_schema.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\schema\element_schema_registry.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\selector.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\shadow_css.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\style_compiler.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\style_url_resolver.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\summary_resolver.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\template_parser\binding_parser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\template_parser\template_ast.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\template_parser\template_parser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\template_parser\template_preparser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\url_resolver.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\util.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\version.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\compile_element.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\compile_method.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\compile_pipe.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\compile_query.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\compile_view.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\constants.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\deps.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\event_binder.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\lifecycle_binder.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\property_binder.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\query_binder.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\util.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\view_binder.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\view_builder.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\src\view_compiler\view_compiler.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\testing\directive_resolver_mock.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\testing\facade\lang.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\testing\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\testing\metadata_overrider.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\testing\ng_module_resolver_mock.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\testing\pipe_resolver_mock.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\testing\private_import_core.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\compiler\testing\schema_registry_mock.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\animation\animation_constants.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\animation\animation_group_player.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\animation\animation_keyframe.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\animation\animation_player.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\animation\animation_queue.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\animation\animation_sequence_player.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\animation\animation_styles.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\animation\animation_style_util.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\animation\animation_transition.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\animation\animation_transition_event.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\animation\metadata.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\animation\view_animation_map.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\application_init.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\application_module.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\application_ref.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\application_tokens.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\change_detection.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\change_detection\change_detection.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\change_detection\change_detection_util.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\change_detection\change_detector_ref.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\change_detection\constants.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\change_detection\differs\default_iterable_differ.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\change_detection\differs\default_keyvalue_differ.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\change_detection\differs\iterable_differs.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\change_detection\differs\keyvalue_differs.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\change_detection\pipe_transform.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\console.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\core.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\core_private_export.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\debug\debug_node.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\debug\debug_renderer.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\di.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\di\forward_ref.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\di\injector.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\di\metadata.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\di\opaque_token.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\di\provider.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\di\reflective_errors.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\di\reflective_injector.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\di\reflective_key.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\di\reflective_provider.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\error_handler.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\facade\async.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\facade\collection.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\facade\errors.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\facade\lang.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\i18n\tokens.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\animation_view_context.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\compiler.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\component_factory.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\component_factory_resolver.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\debug_context.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\element_injector.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\element_ref.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\errors.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\ng_module_factory.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\ng_module_factory_loader.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\query_list.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\system_js_ng_module_factory_loader.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\template_ref.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\view.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\view_container.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\view_container_ref.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\view_ref.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\view_type.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\linker\view_utils.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\metadata.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\metadata\di.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\metadata\directives.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\metadata\lifecycle_hooks.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\metadata\ng_module.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\metadata\view.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\platform_core_providers.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\profile\profile.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\profile\wtf_impl.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\reflection\platform_reflection_capabilities.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\reflection\reflection.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\reflection\reflection_capabilities.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\reflection\reflector.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\reflection\reflector_reader.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\reflection\types.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\render.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\render\api.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\security.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\testability\testability.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\type.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\util.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\util\decorators.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\util\lang.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\version.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\zone.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\src\zone\ng_zone.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\testing\async.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\testing\async_test_completer.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\testing\component_fixture.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\testing\facade\errors.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\testing\facade\lang.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\testing\fake_async.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\testing\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\testing\metadata_override.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\testing\mock_animation_player.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\testing\private_export_testing.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\testing\testing.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\testing\test_bed.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\core\testing\test_compiler.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\abstract_control_directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\abstract_form_group_directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\checkbox_value_accessor.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\control_container.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\control_value_accessor.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\default_value_accessor.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\error_examples.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\form_interface.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\ng_control.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\ng_control_status.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\ng_form.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\ng_model.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\ng_model_group.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\normalize_validator.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\number_value_accessor.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\radio_control_value_accessor.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\range_value_accessor.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_control_directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_control_name.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_group_directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\reactive_directives\form_group_name.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\reactive_errors.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\select_control_value_accessor.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\select_multiple_control_value_accessor.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\shared.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\template_driven_errors.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\directives\validators.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\facade\async.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\facade\collection.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\facade\lang.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\forms.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\form_builder.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\form_providers.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\model.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\private_import_core.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\validators.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\forms\src\version.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\backends\browser_jsonp.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\backends\browser_xhr.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\backends\jsonp_backend.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\backends\xhr_backend.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\base_request_options.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\base_response_options.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\body.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\enums.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\headers.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\http.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\http_module.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\http_utils.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\interfaces.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\static_request.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\static_response.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\url_search_params.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\src\version.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\testing\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\http\testing\mock_backend.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser-dynamic\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser-dynamic\src\facade\lang.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser-dynamic\src\platform-browser-dynamic.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser-dynamic\src\platform_providers.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser-dynamic\src\private_export.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser-dynamic\src\private_import_platform-browser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser-dynamic\src\resource_loader\resource_loader_cache.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser-dynamic\src\resource_loader\resource_loader_impl.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser-dynamic\src\version.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser-dynamic\testing\dom_test_component_renderer.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser-dynamic\testing\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser-dynamic\testing\private_export_testing.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser-dynamic\testing\private_import_platform-browser-dynamic.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser-dynamic\testing\private_import_platform-browser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\browser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\browser\browser_adapter.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\browser\generic_browser_adapter.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\browser\location\browser_platform_location.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\browser\location\history.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\browser\testability.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\browser\title.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\browser\tools\common_tools.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\browser\tools\tools.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\animation_driver.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\debug\by.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\debug\ng_probe.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\dom_adapter.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\dom_animate_player.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\dom_renderer.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\dom_tokens.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\events\dom_events.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\events\event_manager.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\events\hammer_gestures.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\events\key_events.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\shared_styles_host.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\util.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\web_animations_driver.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\dom\web_animations_player.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\facade\browser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\facade\collection.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\facade\lang.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\platform-browser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\private_export.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\private_import_core.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\security\dom_sanitization_service.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\security\html_sanitizer.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\security\style_sanitizer.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\security\url_sanitizer.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\src\version.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\testing\browser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\testing\browser_util.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\testing\facade\lang.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\testing\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\platform-browser\testing\private_import_platform-browser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\apply_redirects.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\config.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\create_router_state.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\create_url_tree.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\directives\router_link.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\directives\router_link_active.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\directives\router_outlet.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\interfaces.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\private_export.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\private_import_platform-browser.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\recognize.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\router.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\router_config_loader.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\router_module.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\router_outlet_map.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\router_preloader.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\router_state.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\route_reuse_strategy.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\shared.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\url_handling_strategy.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\url_tree.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\utils\collection.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\utils\tree.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\src\version.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\testing\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\testing\private_import_router.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\testing\router_testing_module.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40angular\router\upgrade.d.ts" />
+    <TypeScriptCompile Include="Scripts\Diary\Home\Angular2\diary.homeComponent - Copy %282%29.ts" />
+    <TypeScriptCompile Include="Scripts\Diary\Home\Angular2\diary.homeComponent.ts" />
+    <TypeScriptCompile Include="Scripts\Diary\Home\Angular2\diary.main.ts" />
+    <TypeScriptCompile Include="Scripts\Diary\Home\Angular2\diary.homeModule.ts" />
+    <TypeScriptCompile Include="Scripts\Diary\Home\Angular2\Services\diary.homeService.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <!--<ItemGroup>
+    <NodeLib Include="$(MSBuildProjectDirectory)\node_modules\systemjs\dist\system.src.js" />
+    <NodeLib Include="$(MSBuildProjectDirectory)\node_modules\rxjs\bundles\Rx.js" />
+  </ItemGroup>-->
+  <Target Name="CopyFiles" BeforeTargets="Build">
+    <Copy SourceFiles="@(NodeLib)" DestinationFolder="$(MSBuildProjectDirectory)\Scripts" />
+  </Target>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50348</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1034/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

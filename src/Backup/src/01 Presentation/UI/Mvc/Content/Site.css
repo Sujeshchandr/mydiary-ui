@@ -1,0 +1,1393 @@
+﻿html
+{
+    /*background-color: RED;*/
+    /*margin: 0;
+    padding: 0;*/
+}
+
+body
+{
+    /*background-color: #268F26;*/
+    border-color: #FFFFFF;
+    border-left: 128px solid #FFFFFF;
+    border-right: 117px solid #FFFFFF;
+    border-style: solid;
+    border-width: 5px 117px 10px 128px;
+    color: #333333;
+    font-family: "Segoe UI",Verdana,Helvetica,Sans-Serif;
+    font-size: 0.85em;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0; 
+
+  
+}
+
+a
+{
+    color: #333;
+    outline: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: underline;
+}
+
+    a:link, a:visited,
+    a:active, a:hover
+    {
+        color: #333;
+    }
+
+    a:hover
+    {
+        background-color: #c7d1d6;
+    }
+
+hgroup,
+nav, section
+{
+    display: block;
+}
+
+mark
+{
+    background-color: #a6dbed;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.float-left
+{
+    float: left;
+}
+
+.float-right
+{
+    float: right;
+}
+
+.clear-fix:after
+{
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+h1, h2, h3,
+h4, h5, h6
+{
+    color: #000;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h1
+{
+    font-size: 2em;
+}
+
+h2
+{
+    font-size: 1.75em;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+    h5 a:link, h5 a:visited, h5 a:active
+    {
+        padding: 0;
+        text-decoration: none;
+    }
+
+
+/* main layout
+----------------------------------------------------------*/
+.content-wrapper
+{
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.mainBody
+{
+    background-color: plum;
+    clear: both;
+    /*padding-bottom: 35px;*/
+    min-height: 580px;
+    border: 1px solid #1D9D72;
+    /*background: url("../Images/stockexchange2.jpg") repeat scroll right bottom #F7C64A*/
+}
+
+.main-content
+{
+    /*background: url("../Images/accent.png") no-repeat;*/
+    padding-left: 10px;
+    padding-top: 30px;
+}
+
+.featured + .main-content
+{
+    background: url("../Images/heroAccent.png") no-repeat;
+}
+
+.mainsection
+{
+    background-color:#EDEDED;
+    min-height: 580px;
+}
+
+
+footer
+{
+    clear: both;
+    background-color:#1D9D72;
+    font-size: .8em;
+    height: 15px;
+    text-align: center;
+    display: block;
+    color: #0000FF;
+    border: 1px solid #1D9D72;
+    font-weight: bold;
+}
+footer p {
+    height: 2px;
+}
+
+/* site title
+----------------------------------------------------------*/
+.site-title
+{
+    color: #c8c8c8;
+    font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
+    font-size: 2.3em;
+    margin: 0;
+    background: url("/../Content/Diary/Common/diary.jpg") no-repeat scroll 0 0 transparent;
+    width: 115px;
+    height: 55px;
+    
+}
+
+    .site-title a, .site-title a:hover, .site-title a:active
+    {
+        background: none;
+        color: #c8c8c8;
+        outline: none;
+        text-decoration: none;
+    }
+
+
+/* login
+----------------------------------------------------------*/
+#login
+{
+    display: block;
+    font-size: .85em;
+    margin: 0 0 10px;
+    text-align: right;
+}
+
+    #login a
+    {
+        background-color: #d3dce0;
+        margin-left: 10px;
+        margin-right: 3px;
+        padding: 2px 3px;
+        text-decoration: none;
+    }
+
+        #login a.username
+        {
+            background: none;
+            margin: 0;
+            padding: 0;
+            text-decoration: underline;
+        }
+
+    #login ul
+    {
+        margin: 0;
+    }
+
+    #login li
+    {
+        display: inline;
+        list-style: none;
+    }
+
+
+/* menu
+----------------------------------------------------------*/
+ul#menu
+{
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0 0 5px;
+    padding: 0;
+    text-align: right;
+    font-family:cursive
+}
+
+    ul#menu li
+    {
+        display: inline;
+        list-style: none;
+        padding-left: 15px;
+    }
+
+        ul#menu li a
+        {
+            background: none;
+            color: #0000FF;
+            text-decoration: none;
+        }
+
+            ul#menu li a:hover
+            {
+                color: #333;
+                text-decoration: none;
+            }
+
+
+/* page elements
+----------------------------------------------------------*/
+/* featured */
+.featured
+{
+    background-color: #fff;
+}
+
+    .featured .content-wrapper
+    {
+        background-color: #7ac0da;
+        background-image: -ms-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+        background-image: -o-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #7ac0da), color-stop(1, #a4d4e6));
+        background-image: -webkit-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+        background-image: linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+        color: #3e5667;
+        padding: 20px 40px 30px 40px;
+    }
+
+    .featured hgroup.title h1, .featured hgroup.title h2
+    {
+        color: #fff;
+    }
+
+    .featured p
+    {
+        font-size: 1.1em;
+    }
+
+/* page titles */
+hgroup.title
+{
+    margin-bottom: 10px;
+}
+
+    hgroup.title h1, hgroup.title h2
+    {
+        display: inline;
+    }
+
+    hgroup.title h2
+    {
+        font-weight: normal;
+        margin-left: 3px;
+    }
+
+/* features */
+section.feature
+{
+    width: 300px;
+    float: left;
+    padding: 10px;
+}
+
+/* ordered list */
+ol.round
+{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+    ol.round li
+    {
+        margin: 25px 0;
+        padding-left: 45px;
+    }
+
+        ol.round li.zero
+        {
+            background: url("../Images/orderedList0.png") no-repeat;
+        }
+
+        ol.round li.one
+        {
+            background: url("../Images/orderedList1.png") no-repeat;
+        }
+
+        ol.round li.two
+        {
+            background: url("../Images/orderedList2.png") no-repeat;
+        }
+
+        ol.round li.three
+        {
+            background: url("../Images/orderedList3.png") no-repeat;
+        }
+
+        ol.round li.four
+        {
+            background: url("../Images/orderedList4.png") no-repeat;
+        }
+
+        ol.round li.five
+        {
+            background: url("../Images/orderedList5.png") no-repeat;
+        }
+
+        ol.round li.six
+        {
+            background: url("../Images/orderedList6.png") no-repeat;
+        }
+
+        ol.round li.seven
+        {
+            background: url("../Images/orderedList7.png") no-repeat;
+        }
+
+        ol.round li.eight
+        {
+            background: url("../Images/orderedList8.png") no-repeat;
+        }
+
+        ol.round li.nine
+        {
+            background: url("../Images/orderedList9.png") no-repeat;
+        }
+
+/* content */
+article
+{
+    float: left;
+    width: 70%;
+}
+
+aside
+{
+    float: right;
+    width: 25%;
+}
+
+    aside ul
+    {
+        list-style: none;
+        padding: 0;
+    }
+
+        aside ul li
+        {
+            background: url("../Images/bullet.png") no-repeat 0 50%;
+            padding: 2px 0 2px 20px;
+        }
+
+.label
+{
+    font-weight: 700;
+}
+
+/* login page */
+#loginForm
+{
+    border-right: solid 2px #c8c8c8;
+    float: left;
+    width: 55%;
+}
+
+    #loginForm .validation-error
+    {
+        display: block;
+        margin-left: 15px;
+    }
+
+    #loginForm .validation-summary-errors ul
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    #loginForm .validation-summary-errors li
+    {
+        display: inline;
+        list-style: none;
+        margin: 0;
+    }
+
+    #loginForm input
+    {
+        width: 250px;
+    }
+
+        #loginForm input[type="checkbox"],
+        #loginForm input[type="submit"],
+        #loginForm input[type="button"],
+        #loginForm button
+        {
+            width: auto;
+        }
+
+#socialLoginForm
+{
+    margin-left: 40px;
+    float: left;
+    width: 40%;
+}
+
+    #socialLoginForm h2
+    {
+        margin-bottom: 5px;
+    }
+
+#socialLoginList button
+{
+    margin-bottom: 12px;
+}
+
+#logoutForm
+{
+    display: inline;
+}
+
+/* contact */
+.contact h3
+{
+    font-size: 1.2em;
+}
+
+.contact p
+{
+    margin: 5px 0 0 10px;
+}
+
+.contact iframe
+{
+    border: 1px solid #333;
+    margin: 5px 0 0 10px;
+}
+
+/* forms */
+fieldset
+{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+    fieldset legend
+    {
+        display: none;
+    }
+
+    fieldset ol
+    {
+        padding: 0;
+        list-style: none;
+    }
+
+        fieldset ol li
+        {
+            padding-bottom: 5px;
+        }
+
+label
+{
+    display: block;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+    label.checkbox
+    {
+        display: inline;
+    }
+
+input, textarea
+{
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    color: #333;
+    /*font-size: 1.2em;*/
+    margin: 5px 0 6px 0;
+    padding: 5px;
+    width: 200px;
+}
+
+textarea
+{
+    font-family: inherit;
+    width: 500px;
+}
+
+    input:focus, textarea:focus
+    {
+        border: 1px solid #7ac0da;
+    }
+
+input[type="checkbox"]
+{
+    background: transparent;
+    border: inherit;
+    width: auto;
+}
+
+input[type="submit"],
+input[type="button"],
+button
+{
+   background-color: #0000FF;
+color: #BC8F8F;
+cursor: pointer;
+font-weight: bold;
+margin-right: 8px;
+width: auto;
+ border: 3px;
+    border-radius: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+td input[type="submit"],
+td input[type="button"],
+td button
+{
+    font-size: 1em;
+    padding: 4px;
+    margin-right: 4px;
+}
+
+/* info and errors */
+.message-info
+{
+    border: 1px solid;
+    clear: both;
+    padding: 10px 20px;
+}
+
+.message-error
+{
+    clear: both;
+    color: #e80c4d;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.message-success
+{
+    color: #7ac0da;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.error
+{
+    color: #e80c4d;
+}
+
+/* styles for validation helpers */
+.field-validation-error
+{
+    color: #e80c4d;
+    font-weight: bold;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+input.input-validation-error
+{
+    border: 1px solid #e80c4d;
+}
+
+input[type="checkbox"].input-validation-error
+{
+    border: 0 none;
+}
+
+.validation-summary-errors
+{
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+
+/* tables
+----------------------------------------------------------*/
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 0.75em;
+    border: 0 none;
+}
+
+th
+{
+    font-size: 1.2em;
+    text-align: left;
+    border: none 0px;
+    padding-left: 0;
+}
+
+    th a
+    {
+        display: block;
+        position: relative;
+    }
+
+        th a:link, th a:visited, th a:active, th a:hover
+        {
+            color: #333;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 0;
+        }
+
+        th a:hover
+        {
+            color: #000;
+        }
+
+    th.asc a, th.desc a
+    {
+        margin-right: .75em;
+    }
+
+        th.asc a:after, th.desc a:after
+        {
+            display: block;
+            position: absolute;
+            right: 0em;
+            top: 0;
+            font-size: 0.75em;
+        }
+
+        th.asc a:after
+        {
+            content: '▲';
+        }
+
+        th.desc a:after
+        {
+            content: '▼';
+        }
+
+td
+{
+    padding: 0.25em 2em 0.25em 0em;
+    border: 0 none;
+}
+
+tr.pager td
+{
+    padding: 0 0.25em 0 0;
+}
+
+
+/********************
+*   Mobile Styles   *
+********************/
+@media only screen and (max-width: 850px)
+{
+
+    /* header
+    ----------------------------------------------------------*/
+    header .float-left,
+    header .float-right
+    {
+        float: none;
+    }
+
+    /* logo */
+    header .site-title
+    {
+        margin: 10px;
+        text-align: center;
+    }
+
+    /* login */
+    #login
+    {
+        font-size: .85em;
+        margin: 0 0 12px;
+        text-align: center;
+    }
+
+        #login ul
+        {
+            margin: 5px 0;
+            padding: 0;
+        }
+
+        #login li
+        {
+            display: inline;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #login a
+        {
+            background: none;
+            color: #999;
+            font-weight: 600;
+            margin: 2px;
+            padding: 0;
+        }
+
+            #login a:hover
+            {
+                color: #333;
+            }
+
+    /* menu */
+    nav
+    {
+        margin-bottom: 5px;
+    }
+
+    ul#menu
+    {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+        ul#menu li
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+
+    /* main layout
+    ----------------------------------------------------------*/
+    .main-content,
+    .featured + .main-content
+    {
+        background-position: 10px 0;
+    }
+
+    .content-wrapper
+    {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .featured .content-wrapper
+    {
+        padding: 10px;
+    }
+
+    /* page content */
+    article, aside
+    {
+        float: none;
+        width: 100%;
+    }
+
+    /* ordered list */
+    ol.round
+    {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+        ol.round li
+        {
+            padding-left: 10px;
+            margin: 25px 0;
+        }
+
+            ol.round li.zero,
+            ol.round li.one,
+            ol.round li.two,
+            ol.round li.three,
+            ol.round li.four,
+            ol.round li.five,
+            ol.round li.six,
+            ol.round li.seven,
+            ol.round li.eight,
+            ol.round li.nine
+            {
+                background: none;
+            }
+
+    /* features */
+    section.feature
+    {
+        float: none;
+        padding: 10px;
+        width: auto;
+    }
+
+        section.feature img
+        {
+            color: #999;
+            content: attr(alt);
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+    /* forms */
+    input
+    {
+        width: 90%;
+    }
+
+    /* login page */
+    #loginForm
+    {
+        border-right: none;
+        float: none;
+        width: auto;
+    }
+
+        #loginForm .validation-error
+        {
+            display: block;
+            margin-left: 15px;
+        }
+
+    #socialLoginForm
+    {
+        margin-left: 0;
+        float: none;
+        width: auto;
+    }
+
+
+    /* footer
+    ----------------------------------------------------------*/
+    footer .float-left,
+    footer .float-right
+    {
+        float: none;
+    }
+
+    footer
+    {
+        text-align: center;
+        height: auto;
+        padding: 10px 0;
+    }
+
+        footer p
+        {
+            margin: 0;
+        }
+}
+/* Header*/
+
+header
+{
+    background-color: #1D9D72;
+    height: 40px;
+    border: 1px solid #1D9D72;
+   
+}
+
+    header .content-wrapper
+    {
+        /*height: 55px;*/
+        padding-top: 7px;
+    }
+
+ /******* Start Expenses *********/
+
+.add_expense_div
+{
+    width:  734px;/*inherit*/
+    padding: 10px;
+    /*float:left;*/   
+    margin: 10px;
+    background-color: #EDEDED;
+    border-color: #7E2525;
+    box-shadow: 0 0 4px #000000;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+/*.expenseDetails_innerdiv
+{
+    background-color: #EDEDED;
+    padding: 10px;
+    width: 730px;
+    border-color: #7E2525;
+    border: 1px solid;
+    box-shadow: 0 0 4px #000000;
+    border-radius: 10px;
+    margin: 10px;
+    height:500px;
+
+}*/
+
+/*.expenseDetails_Outerdiv
+{
+    float: left;
+    left: 20px;
+    position: relative;
+    top: 20px;
+}*/
+
+/*******End Expenses**********/
+
+/******* Start Incomes *********/
+
+.add_income_div
+{
+    width: 734px;/*inherit*/
+    padding: 10px;
+    /*float:left;*/   
+    margin: 10px;
+    background-color: #EDEDED;
+    border-color: #7E2525;
+    box-shadow: 0 0 4px #000000;
+    border: 1px solid;
+    border-radius: 10px;
+}
+.add_income_div a
+{
+    cursor:pointer;
+}
+/*.incomeDetails_innerdiv
+{
+    background-color: #EDEDED;
+    padding: 10px;
+    width: 730px;
+    border-color: #7E2525;
+    border: 1px solid;
+    box-shadow: 0 0 4px #000000;
+    border-radius: 10px;
+    margin: 10px;
+    height:500px;
+    background: #f7c64a url("../Images/coins.jpg") bottom left repeat
+
+}*/
+
+/*.incomeDetails_Outerdiv
+{
+    float: left;
+    left: 20px;
+    position: relative;
+    top: 20px;
+}*/
+
+.income_add
+{
+    /*display :none;*/
+}
+
+/*******End Incomes**********/
+
+/***** Start ExpenseSummary *******/
+
+/*.expenseDetails_Summary
+{
+    box-shadow: 0 0 10px #1D9D72;
+    border-radius: 10px;
+    margin: 10px;
+    height: 80%;
+    background:none repeat scroll 0 0 #FFFFFF;
+    overflow:hidden;
+}
+.expenseDetails_filterdiv
+{
+    background-color:#1D9D72;
+    border-radius: 35px;
+    box-shadow: 0 0 10px #1D9D72;
+    margin-left: 8px;
+    margin-right: 10px;
+    padding-left: 38px;
+    padding-bottom: 9px;
+}
+.expenseDetails_filterdiv_date
+{
+    float:left;
+    padding:2px;
+}
+.expenseDetails_filterdiv_type
+{
+    padding:2px;
+
+}
+.expenseDetails_Summary_Title
+{
+    background-color: #1D9D72;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 4px #000000;
+    color: #0000FF;
+    font-family: 'Comic Sans MS';
+    font-size: medium;
+    font-style: oblique;
+    font-weight: bolder;
+    height: 8%;
+    text-align: center;
+}
+.expenseDetails_Summary_Header
+{ 
+   
+    border: .5px solid #909090;
+    border-bottom: .3px solid #D0D0D0;
+    font-weight: bold;
+    padding:3px;
+    font-size:small;
+    font-family:Times New Roman;
+    color:teal
+}
+.expenseDetails_Summary_Header div
+{
+    padding-left: 10px;
+    text-align: left;
+}
+
+.expenseDetails_Summary_Data
+{
+    border: 0.5px solid #909090;
+    font-family: Segoe UI;
+    font-style: inherit;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.expenseDetails_Summary_Data div
+{
+    border-bottom: 0.3px solid #D0D0D0;
+    margin: 0;
+    padding-left: 10px;
+    text-align: left;
+}
+
+
+.expenseDetails_Date
+{
+    float:left;
+    width:15%;
+    border-radius: 10px 0px 0px 0px;
+}
+
+.expenseDetails_ExpenseType
+{
+    float:left;
+    width:25%;
+}
+
+.expenseDetails_ExpenseDescription
+{
+    float:left;
+    width:45%;
+
+}
+.expenseDetails_ExpenseComments
+{
+    float:left;
+    width:15%;
+}
+.expenseDetails_ExpenseAmount
+{
+    float:left;
+    width:15%;
+}*/
+
+
+
+/***** End ExpenseSummary *******/
+.diary_toolbox
+{
+    /*background-color: #FF69B4;*/
+    background-color: #CADDD7;
+    border: 1px solid;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px #91A9A1;
+    float: right;
+    height: 200px;
+    padding: 10px;
+    position: relative;
+    right: 30px;
+    width: 200px;
+    top: 20px;
+}
+
+/*.addexpenses_toolbox
+{
+    color: #0000FF;
+    height: 50px;
+    width: 200px;
+    padding: 15px;
+    
+}*/
+.diary_toolbox a
+{
+    cursor: pointer;
+    color: #0000FF;
+    outline: medium none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: none;
+}
+     
+.diary_toolbox  a:hover
+{ 
+    background-color: #30DFA4;
+}
+/*.expenseview_topdiv
+{  
+  background-color: #EDEDED;
+  padding: 10px;
+  width: 600px;
+  top:100px;
+  left:150px;
+  margin:10px;
+
+}*/
+
+.diary_activityArea_outerDiv
+{ 
+  display: none;
+   
+   
+}
+.diary_activityArea_outerDiv_close
+{
+    float:right;
+    cursor:pointer;
+    font-weight:bolder;
+   
+}
+
+/*******Validator*********/
+
+.DRValidationError
+{
+    border: 1px double #CC0000;
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.2);
+}
+
+/****UI*/
+
+.outerlaydivui
+{
+     z-index: 1;
+    position: fixed;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: #000000;
+    top: 0px;
+    left: 0px;
+    opacity:0.5
+}
+
+.errormessage
+{
+   color:#E20000;
+   font: 12px arial;
+}
+
+div.userprofile
+{
+    background-color: rgb(0, 128, 113);
+    color: #FFFFFF;
+    padding: 8px;
+    width: auto;
+}
+ .sitedescription
+    {
+        background-color:#D8D8D8;
+        float: left;
+        min-height: 580px;
+        left: 0px;
+        position: relative;
+        top: 0px;
+        width: 71%;
+        background: url("../Images/stockexchange2.jpg") repeat-x scroll right top #F0FFF0;
+    }
+
+ .useractions
+    {
+        float: right;
+        background-color:#D8D8D8;
+        min-height: 580px;
+        width: 29%;
+    }
+
+ .siteimages
+    {
+        background-color: #D8D8D8;
+        min-height: 580px;
+        position: relative;
+        width: 100%;
+    }
+
+ /*Menu */
+.drmenus
+{
+   
+    height: 100%;
+    width: 1096px;
+}
+.dMenu {
+    margin:5px 0 0 16px
+}
+div.menuLogin
+{
+    /*background-color: #6D6D6D;*/
+  
+    padding: 2px;
+    height: 35px;
+    min-width: 700px;
+    width: 600px;
+}
+div.menuLogin text {
+    color: white;
+}
+div.menuloginData {
+    height: 100%;
+}
+div.menuloginData span.errormessage
+    {
+        background-color: #9ACD32;
+        color: blue;
+        font: 12px arial;
+        left: 409px;
+        padding: 2px;
+        position: relative;
+        top: -5px;
+        z-index: 9999;
+}
+.login-errormessage
+{
+    background-color: #9ACD32;
+    color: #FF0000;
+    font: 12px arial;
+    left: 47px;
+    position: relative;
+    top: 1px;
+    z-index: 9999;
+    font-weight: bold;
+}
+
+/* TODO==> Remove this section after if  registration is not successfully redesign*/
+/*div.registerData div.userImage {
+  margin-top: 0px;
+  height: 23px;
+}
+div.registerData div.userImage div.container{
+  margin-top: 0px;
+  height: 100%;
+}
+div.registerData div.userImage div.container div{
+  margin-top: 0px;
+  height: 100%;
+} 
+div.registerData div.userImage div.container span.btn-success{
+  margin-top: 0px;
+  height: 100%;
+} 
+
+div.registerData div.userImage input[id="fileupload"]
+{
+        cursor: pointer;
+        direction: ltr;
+        font-size: 0px;
+        height: 18px;
+        position: relative;
+        top: 0;
+        margin: 0;
+        opacity: 0;
+        right: 0;
+}*/
+
+/*END REDESIGN SECTION*/
+
+/*.float-right.menuLogin > div.email {
+  left: 0;
+  position: relative;
+  top: 5px;
+  width: 64px;
+}
+.inputemail {
+  height: 25px;
+  width: 215px;
+}
+.inputemail > input {
+  bottom: 19px;
+  left: 48px;
+  position: relative;
+  top: -15px;
+}
+.password1 {
+  position: relative;
+  right: -197px;
+  top: -40px;
+  width: 64px;
+}
+.inputpassword {
+  left: 258px;
+  position: relative;
+  top: -60px;
+}*/
+
+/* ng-grid */
+
+.gridStyle {
+   
+    width: inherit;
+    height: 92%;/* 8 % title*/
+    box-shadow:inherit;
+}
+
+ .select2 > .select2-choice.ui-select-match {
+      /* Because of the inclusion of Bootstrap */
+      height: 29px;
+    }
+
+    .selectize-control > .selectize-dropdown {
+      top: 36px;
+    }
+.select2.select2-container
+{
+    min-width:150px;
+}
+
+/* UI.Bootstrap to remove empty href attributes from directive templates */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+/*.cellPopover {
+    overflow: visible;
+}*/
