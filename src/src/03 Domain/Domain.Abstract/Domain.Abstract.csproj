@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8BBB2C28-E01C-445A-AA37-43D2ECCE01BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyDiary.Domain.Abstract</RootNamespace>
+    <AssemblyName>MyDiary.Domain.Abstract</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Domains\IChart.cs" />
+    <Compile Include="Domains\IExpense.cs" />
+    <Compile Include="Domains\IExpenseDetails.cs" />
+    <Compile Include="Domains\IExpenseType.cs" />
+    <Compile Include="Domains\IFood.cs" />
+    <Compile Include="Domains\IImage.cs" />
+    <Compile Include="Domains\IIncome.cs" />
+    <Compile Include="Domains\IIncomeType.cs" />
+    <Compile Include="Domains\ILogin.cs" />
+    <Compile Include="Domains\IOpenLogin.cs" />
+    <Compile Include="Domains\IPeople.cs" />
+    <Compile Include="Domains\IRole.cs" />
+    <Compile Include="EnumTypes\ChartType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Mongo\IExpenseMongoRepository.cs" />
+    <Compile Include="Repositories\SQL\IExpenseRepository.cs" />
+    <Compile Include="Repositories\SQL\IImageRepository.cs" />
+    <Compile Include="Repositories\SQL\IIncomeRepository.cs" />
+    <Compile Include="Repositories\SQL\IIncomeTypeRepository.cs" />
+    <Compile Include="Repositories\SQL\IPeopleRepository.cs" />
+    <Compile Include="Repositories\Mongo\IIncomeMongoRepository.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

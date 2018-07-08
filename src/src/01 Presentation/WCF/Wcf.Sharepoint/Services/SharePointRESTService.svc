@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="MyDIARY.Common.WCF.Sharepoint.Services.SharePointRESTService" CodeBehind="SharePointRESTService.svc.cs" %>

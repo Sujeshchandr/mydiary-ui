@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+<script type="text/javascript" >
+
+    window.onload = function ()
+    {
+        
+
+        //var target = "http://localhost:64888/mydiary/v2/PostData";
+        //var form = document.createElement('form');
+        //form.encoding = "multipart/form-data";
+        //form.method = "POST";
+        //form.setAttribute('action', target);
+
+        //if (!this.iFrame) {
+
+        //    this.iFrame =  document.getElementById("frameid");;
+        //}
+        
+
+        //form.setAttribute('target', 'my_iframe');
+        //form.style.display = 'none';
+        //document.body.appendChild(form);
+
+        //form.submit();
+
+        
+    }
+
+    function addEvent(element, type, handler) {
+        if (element.addEventListener) {
+            element.addEventListener(type, handler, false);
+        } else if (element.attachEvent) {
+            element.attachEvent("on" + type, handler);
+        } else {
+            element["on" + type] = handler;
+        }
+    }
+
+    function iFrameLoaded() {
+
+        var $={};
+        $.iFrame = document.querySelector('#frameid');
+
+        //$.iFrame.src = "http://localhost:64888/mydiary/v2/PostData";
+
+        var contentDocument = document.querySelector('#frameid').contentDocument;
+
+
+        try {
+            // fixing Opera 10.53
+            if (contentDocument &&
+              contentDocument.body &&
+              contentDocument.body.innerHTML == "") {
+                // In Opera event is fired second time
+                // when body.innerHTML changed from false
+                // to server response approx. after 1 sec
+                // when we upload file with iframe
+                return;
+            }
+        } catch (error) {
+            //IE may throw an "access is denied" error when attempting to access contentDocument
+            alert("error");
+            return;
+        }
+        // iframe.contentWindow.document - for IE<7
+        var doc = contentDocument || contentDocument.document;
+        var innerHtml = doc.body.innerHTML;
+         innerHtml = /(\{.*\})/.exec(innerHtml)[0];
+
+         alert(innerHtml);
+    
+    }
+
+
+</script>
+
+ 
+
+</body>
+    
+</html>

@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Test Page";
+}
+<link rel="stylesheet" ; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="~/Content/Diary/Test/diary.test.angular.css" rel="stylesheet" />
+
+<h3>Learning Angular Ng-Table</h3>
+
+<div class="row-fluid" ng-app ="myApp" ng-controller="testNgTableController" >
+
+    <button ng-click="process()">Click Me !!</button>
+
+    @*<table ng-table="tableParams"  id ="tblDemoAngular" class="table table-condensed table-bordered table-striped" show-filter="false">
+        <tr ng-repeat="user in $data">
+            <td title="'Extn:'" filter="{ extn: 'number'}" sortable="'extn'">
+                {{user.extn}}
+            </td>
+            <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
+                {{user.name}}
+            </td>
+            <td title="'Office'" filter="{ office: 'text'}" sortable="'office'">
+                {{user.office}}
+            </td>
+            <td title="'Position'" filter="{ position: 'text'}" sortable="'position'">
+                {{user.position}}
+            </td>
+            <td title="'Salary'" filter="{ salary: 'text'}" sortable="'salary'">
+                {{user.salary}}
+            </td>
+            <td title="'Start Date'" filter="{ start_date: 'date'}" sortable="'start_date'">
+                {{user.start_date}}
+            </td>
+        </tr>
+    </table>*@
+
+    <table ng-table-dynamic ="tableParams with tableColumnDefinitions" id ="tblDemoAngular" 
+           class="table table-condensed table-bordered table-striped" show-filter={{ShowFilter}}  >
+        <tr ng-repeat="row in $data" class="animate">
+            <td ng-repeat="col in $columns">{{row[col.field]}}</td>
+        </tr>
+    </table>
+
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryui")
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+<script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+<script src="~/Scripts/Diary/Test/diary.test.ngTable.js"></script>

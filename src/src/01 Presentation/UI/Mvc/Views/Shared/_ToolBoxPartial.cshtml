@@ -1,0 +1,11 @@
+﻿@model MyDiary.UI.ViewModels.ToolBox.ToolBoxViewModel
+
+<div class="diary_toolbox">
+
+    @foreach(MyDiary.UI.ViewModels.ToolBox.ToolBoxActions toolBoxAction in Model.Actions)
+    {
+    <div class="@toolBoxAction.CssClass" data-type="@toolBoxAction.Action"> <a>@toolBoxAction.Text</a></div>        
+    }  
+
+</div>
+

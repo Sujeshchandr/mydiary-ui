@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Database_Development</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{80055f45-b702-4661-b375-7485dd51b067}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>MyDairy.Database_Development</RootNamespace>
+    <AssemblyName>MyDairy.Database_Development</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AI</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <GenerateCreateScript>True</GenerateCreateScript>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Snapshots" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\DRY_OpenSites.sql" />
+    <Build Include="dbo\Tables\DRY_User_Login.sql" />
+    <Build Include="dbo\Tables\DRY_Images.sql" />
+    <Build Include="dbo\Tables\DRY_User.sql" />
+    <Build Include="dbo\Tables\DRY_IncomeTypes.sql" />
+    <Build Include="dbo\Tables\DRY_Incomes.sql" />
+    <Build Include="dbo\Tables\DRY_Expenses.sql" />
+    <Build Include="dbo\Tables\DRY_ExpenseTypes.sql" />
+    <Build Include="dbo\Tables\DRY_Roles.sql" />
+    <Build Include="dbo\Stored Procedures\User_Add.sql" />
+    <Build Include="dbo\Stored Procedures\UserLogin_Add.sql" />
+    <Build Include="dbo\Stored Procedures\UserLogin_Select.sql" />
+    <Build Include="dbo\Stored Procedures\Image_Add.sql" />
+    <Build Include="dbo\Stored Procedures\Image_SelectById.sql" />
+    <Build Include="dbo\Stored Procedures\IncomeTypes_SelectByUserId.sql" />
+    <Build Include="dbo\Stored Procedures\IncomeType_Add.sql" />
+    <Build Include="dbo\Stored Procedures\Income_Add.sql" />
+    <Build Include="dbo\Stored Procedures\ExpenseType_Add.sql" />
+    <Build Include="dbo\Stored Procedures\ExpenseTypes_SelectByUserId.sql" />
+    <Build Include="dbo\Stored Procedures\Expense_Add.sql" />
+    <Build Include="dbo\Stored Procedures\Expense_Update.sql" />
+    <Build Include="dbo\Stored Procedures\Expense_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\Income_Update.sql" />
+    <Build Include="dbo\Stored Procedures\Incomes_SelectByUserId.sql" />
+    <Build Include="dbo\Stored Procedures\Expenses_SelectByUserId.sql" />
+    <Build Include="dbo\Stored Procedures\DRY_GetAllUsers.sql" />
+    <Build Include="dbo\Stored Procedures\Income_Delete.sql" />
+    <Build Include="dbo\Tables\system_logging.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Snapshots\Database_Development_20151125_09-18-58.dacpac" />
+  </ItemGroup>
+</Project>

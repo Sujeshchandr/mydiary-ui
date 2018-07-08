@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SharePointCommonService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:64986/Services/SharePointCommonService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:64986/Services/SharePointCommonService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:64986/Services/SharePointCommonService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISharePointCommonService_GetFileById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileById" />
+  </wsdl:message>
+  <wsdl:message name="ISharePointCommonService_GetFileById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISharePointCommonService_GetFileByFileName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileByFileName" />
+  </wsdl:message>
+  <wsdl:message name="ISharePointCommonService_GetFileByFileName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileByFileNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadData">
+    <wsdl:part name="parameters" element="tns:UploadData" />
+  </wsdl:message>
+  <wsdl:message name="UploadResponse">
+    <wsdl:part name="parameters" element="tns:UploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISharePointCommonService_UploadAsByteArray_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadAsByteArray" />
+  </wsdl:message>
+  <wsdl:message name="ISharePointCommonService_UploadAsByteArray_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadAsByteArrayResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISharePointCommonService">
+    <wsdl:operation name="GetFileById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISharePointCommonService/GetFileById" message="tns:ISharePointCommonService_GetFileById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISharePointCommonService/GetFileByIdResponse" message="tns:ISharePointCommonService_GetFileById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileByFileName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISharePointCommonService/GetFileByFileName" message="tns:ISharePointCommonService_GetFileByFileName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISharePointCommonService/GetFileByFileNameResponse" message="tns:ISharePointCommonService_GetFileByFileName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadAsStream">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISharePointCommonService/UploadAsStream" name="UploadData" message="tns:UploadData" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISharePointCommonService/UploadAsStreamResponse" name="UploadResponse" message="tns:UploadResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadAsByteArray">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISharePointCommonService/UploadAsByteArray" message="tns:ISharePointCommonService_UploadAsByteArray_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISharePointCommonService/UploadAsByteArrayResponse" message="tns:ISharePointCommonService_UploadAsByteArray_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISharePointCommonService" type="tns:ISharePointCommonService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFileById">
+      <soap:operation soapAction="http://tempuri.org/ISharePointCommonService/GetFileById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileByFileName">
+      <soap:operation soapAction="http://tempuri.org/ISharePointCommonService/GetFileByFileName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAsStream">
+      <soap:operation soapAction="http://tempuri.org/ISharePointCommonService/UploadAsStream" style="document" />
+      <wsdl:input name="UploadData">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UploadResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadAsByteArray">
+      <soap:operation soapAction="http://tempuri.org/ISharePointCommonService/UploadAsByteArray" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SharePointCommonService">
+    <wsdl:port name="BasicHttpBinding_ISharePointCommonService" binding="tns:BasicHttpBinding_ISharePointCommonService">
+      <soap:address location="http://localhost:64986/Services/SharePointCommonService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
