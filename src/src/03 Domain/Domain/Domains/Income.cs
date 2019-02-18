@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
-using MyDiary.Common.Comparer;
-using MyDiary.Domain.Abstract.Domains;
+﻿using MyDiary.Domain.Abstract.Domains;
 using MyDiary.Domain.Abstract.Repositories.Mongo;
 using MyDiary.Domain.Abstract.Repositories.SQL;
 using MyDiary.Domain.Domain.Abstracts;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Transactions;
 
 namespace MyDiary.Domain.Domains
 {
