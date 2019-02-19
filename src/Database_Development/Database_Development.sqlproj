@@ -94,5 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Snapshots\Database_Development_20151125_09-18-58.dacpac" />
+    <None Include="HelpText.txt" />
   </ItemGroup>
 </Project>
