@@ -9,8 +9,8 @@ System.register(["@angular/core"], function (exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var __moduleName = context_1 && context_1.id;
     var core_1, LineChartDemoComponent1;
+    var __moduleName = context_1 && context_1.id;
     return {
         setters: [
             function (core_1_1) {
@@ -18,7 +18,7 @@ System.register(["@angular/core"], function (exports_1, context_1) {
             }
         ],
         execute: function () {
-            LineChartDemoComponent1 = (function () {
+            LineChartDemoComponent1 = /** @class */ (function () {
                 function LineChartDemoComponent1() {
                     this.doughnutChartLabels = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
                     this.doughnutChartData = [350, 450, 100];
@@ -84,17 +84,17 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                 LineChartDemoComponent1.prototype.chartHovered = function (e) {
                     console.log(e);
                 };
+                LineChartDemoComponent1 = __decorate([
+                    core_1.Component({
+                        selector: 'mydiary-chart',
+                        template: "\n    <div>\n      <div class=\"row-fluid\">\n      <div class=\"col-md-6\">\n         <canvas baseChart width=\"521\" height=\"350\"\n                [datasets]=\"lineChartData\"\n                [labels]=\"lineChartLabels\"\n                [options]=\"lineChartOptions\"\n                [colors]=\"chartColors\"\n                [legend]=\"lineChartLegend\"\n                [chartType]=\"lineChartType\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n          </canvas>\n       </div>\n       </div>\n      <div class=\"row-fluid\">\n      <div class=\"col-md-6\">\n         <canvas baseChart width=\"521\" height=\"350\"\n                [datasets]=\"barChartData\"\n                [labels]=\"barChartLabels\"\n                [colors]=\"chartColors\"\n                [options]=\"barChartOptions\"\n                [chartType]=\"barChartType\"\n                [legend]=\"barChartLegend\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n          </canvas>\n       </div>\n       </div>\n    </div>\n  "
+                    }),
+                    __metadata("design:paramtypes", [])
+                ], LineChartDemoComponent1);
                 return LineChartDemoComponent1;
             }());
-            LineChartDemoComponent1 = __decorate([
-                core_1.Component({
-                    selector: 'mydiary-chart',
-                    template: "\n    <div>\n      <div class=\"row-fluid\">\n      <div class=\"col-md-6\">\n         <canvas baseChart width=\"521\" height=\"350\"\n                [datasets]=\"lineChartData\"\n                [labels]=\"lineChartLabels\"\n                [options]=\"lineChartOptions\"\n                [colors]=\"chartColors\"\n                [legend]=\"lineChartLegend\"\n                [chartType]=\"lineChartType\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n          </canvas>\n       </div>\n       </div>\n      <div class=\"row-fluid\">\n      <div class=\"col-md-6\">\n         <canvas baseChart width=\"521\" height=\"350\"\n                [datasets]=\"barChartData\"\n                [labels]=\"barChartLabels\"\n                [colors]=\"chartColors\"\n                [options]=\"barChartOptions\"\n                [chartType]=\"barChartType\"\n                [legend]=\"barChartLegend\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n          </canvas>\n       </div>\n       </div>\n    </div>\n  "
-                }),
-                __metadata("design:paramtypes", [])
-            ], LineChartDemoComponent1);
             exports_1("LineChartDemoComponent1", LineChartDemoComponent1);
         }
     };
 });
-//# sourceMappingURL=diary.homeComponent - Copy (2).js.map
+//# sourceMappingURL=diary.homeComponent%20-%20Copy%20(2).js.map

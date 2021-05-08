@@ -4,5 +4,5 @@
 ////            data: {
 ////                Product : 'I-Phone 7'
 ////            }
-////        }); 
+////        });
 //# sourceMappingURL=diary.test.vue-main.js.map

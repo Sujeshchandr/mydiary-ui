@@ -6,8 +6,8 @@ System.register(["@angular/core"], function (exports_1, context_1) {
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var __moduleName = context_1 && context_1.id;
     var core_1, LineChartDemoComponent;
+    var __moduleName = context_1 && context_1.id;
     return {
         setters: [
             function (core_1_1) {
@@ -15,7 +15,7 @@ System.register(["@angular/core"], function (exports_1, context_1) {
             }
         ],
         execute: function () {
-            LineChartDemoComponent = (function () {
+            LineChartDemoComponent = /** @class */ (function () {
                 function LineChartDemoComponent() {
                     // lineChart
                     this.lineChartData = [
@@ -73,17 +73,17 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                 LineChartDemoComponent.prototype.chartHovered = function (e) {
                     console.log(e);
                 };
+                LineChartDemoComponent = __decorate([
+                    core_1.Component({
+                        selector: 'line-chart-demo',
+                        //template: `<h1>Home page is loading using {{name}}</h1>`
+                        templateUrl: "./Scripts/Diary/Home/Angular2/line-chart-demo.html"
+                    })
+                ], LineChartDemoComponent);
                 return LineChartDemoComponent;
             }());
-            LineChartDemoComponent = __decorate([
-                core_1.Component({
-                    selector: 'line-chart-demo',
-                    //template: `<h1>Home page is loading using {{name}}</h1>`
-                    templateUrl: "./Scripts/Diary/Home/Angular2/line-chart-demo.html"
-                })
-            ], LineChartDemoComponent);
             exports_1("LineChartDemoComponent", LineChartDemoComponent);
         }
     };
 });
-//# sourceMappingURL=diary.homeComponent - Copy.js.map
+//# sourceMappingURL=diary.homeComponent%20-%20Copy.js.map

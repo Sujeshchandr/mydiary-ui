@@ -9,8 +9,8 @@ System.register(["@angular/core", "@angular/http", "rxjs/add/operator/map", "ng2
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var __moduleName = context_1 && context_1.id;
     var core_1, http_1, ng2_charts_1, diary_homeService_js_1, LineChartDemoComponent, MonthlyChart;
+    var __moduleName = context_1 && context_1.id;
     return {
         setters: [
             function (core_1_1) {
@@ -29,7 +29,7 @@ System.register(["@angular/core", "@angular/http", "rxjs/add/operator/map", "ng2
             }
         ],
         execute: function () {
-            LineChartDemoComponent = (function () {
+            LineChartDemoComponent = /** @class */ (function () {
                 function LineChartDemoComponent(http, homeService) {
                     this.http = http;
                     this.homeService = homeService;
@@ -126,24 +126,24 @@ System.register(["@angular/core", "@angular/http", "rxjs/add/operator/map", "ng2
                 };
                 LineChartDemoComponent.prototype.chartHovered = function (e) {
                 };
+                __decorate([
+                    core_1.ViewChild(ng2_charts_1.BaseChartDirective),
+                    __metadata("design:type", ng2_charts_1.BaseChartDirective)
+                ], LineChartDemoComponent.prototype, "chart", void 0);
+                LineChartDemoComponent = __decorate([
+                    core_1.Component({
+                        selector: 'mydiary-chart',
+                        providers: [diary_homeService_js_1.HomeService],
+                        template: "\n    <div>\n      <div class=\"row-fluid\">\n      <div class=\"col-md-6\">\n         <canvas baseChart width=\"521\" height=\"350\"\n                [datasets]=\"lineChartData\"\n                [labels]=\"lineChartLabels\"\n                [options]=\"lineChartOptions\"\n                [colors]=\"chartColors\"\n                [legend]=\"lineChartLegend\"\n                [chartType]=\"lineChartType\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n          </canvas>\n       </div>\n       </div>\n      <div class=\"row-fluid\">\n      <div class=\"col-md-6\">\n         <canvas baseChart width=\"521\" height=\"350\"\n                [datasets]=\"barChartData\"\n                [labels]=\"barChartLabels\"\n                [colors]=\"chartColors\"\n                [options]=\"barChartOptions\"\n                [chartType]=\"barChartType\"\n                [legend]=\"barChartLegend\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n          </canvas>\n       </div>\n       </div>\n    </div>\n  "
+                    }),
+                    core_1.Injectable(),
+                    __metadata("design:paramtypes", [http_1.Http,
+                        diary_homeService_js_1.HomeService])
+                ], LineChartDemoComponent);
                 return LineChartDemoComponent;
             }());
-            __decorate([
-                core_1.ViewChild(ng2_charts_1.BaseChartDirective),
-                __metadata("design:type", ng2_charts_1.BaseChartDirective)
-            ], LineChartDemoComponent.prototype, "chart", void 0);
-            LineChartDemoComponent = __decorate([
-                core_1.Component({
-                    selector: 'mydiary-chart',
-                    providers: [diary_homeService_js_1.HomeService],
-                    template: "\n    <div>\n      <div class=\"row-fluid\">\n      <div class=\"col-md-6\">\n         <canvas baseChart width=\"521\" height=\"350\"\n                [datasets]=\"lineChartData\"\n                [labels]=\"lineChartLabels\"\n                [options]=\"lineChartOptions\"\n                [colors]=\"chartColors\"\n                [legend]=\"lineChartLegend\"\n                [chartType]=\"lineChartType\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n          </canvas>\n       </div>\n       </div>\n      <div class=\"row-fluid\">\n      <div class=\"col-md-6\">\n         <canvas baseChart width=\"521\" height=\"350\"\n                [datasets]=\"barChartData\"\n                [labels]=\"barChartLabels\"\n                [colors]=\"chartColors\"\n                [options]=\"barChartOptions\"\n                [chartType]=\"barChartType\"\n                [legend]=\"barChartLegend\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n          </canvas>\n       </div>\n       </div>\n    </div>\n  "
-                }),
-                core_1.Injectable(),
-                __metadata("design:paramtypes", [http_1.Http,
-                    diary_homeService_js_1.HomeService])
-            ], LineChartDemoComponent);
             exports_1("LineChartDemoComponent", LineChartDemoComponent);
-            MonthlyChart = (function () {
+            MonthlyChart = /** @class */ (function () {
                 function MonthlyChart() {
                 }
                 return MonthlyChart;
